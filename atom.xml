@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
-    <title>宋小狗</title>
-    <updated>2020-07-02T11:12:32.719Z</updated>
+    <title>天空之城</title>
+    <updated>2020-07-02T11:51:36.971Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
     <subtitle>个人技术博客</subtitle>
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 宋小狗</rights>
+    <rights>All rights reserved 2020, 天空之城</rights>
     <entry>
         <title type="html"><![CDATA[Spring boot技术相关]]></title>
         <id>https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/</id>
