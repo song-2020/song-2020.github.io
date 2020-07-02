@@ -1,98 +1,104 @@
-
-<!DOCTYPE html>
 <html>
   <head>
-    
-<meta charset="utf-8" >
-
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Java多线程编程 | 天空之城</title>
-<meta name="description" content="个人技术博客">
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593697514482">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593697553004">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Java多线程编程 | 天空之城 - Atom Feed" href="https://song-2020.Github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
-
-
+    <meta name="description" content="#一、定义
+Java 给多线程编程提供了内置的支持。
+一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。
+多线程是多任务的一种特别的形式，但多线程使用了更小的资源开销。
+这里定义和线程相关的另..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
   </head>
   <body>
-    <div id="app" class="main">
-      <div class="site-header-container">
-  <div class="site-header">
-    <div class="left">
-      <a href="https://song-2020.Github.io">
-        <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593697514482" alt="" width="32px" height="32px">
-      </a>
-      <a href="https://song-2020.Github.io">
-        <h1 class="site-title">天空之城</h1>
-      </a>
-    </div>
-    <div class="right">
-      <transition name="fade">
-        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
-      </transition>
-    </div>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://song-2020.Github.io">
+  <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593697553004" alt="">
+  </a>
+  <h1 class="site-title">
+    天空之城
+  </h1>
+  <p class="site-description">
+    个人技术博客
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="https://song-2020.github.io/post/guan-yu-wo/" class="menu">
+          关于我
+        </a>
+      
+    
+      
+        <a href="http://www.thinkerofbraver.top:8092/user/login" class="menu">
+          疫情下人员管理系统
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
   </div>
 </div>
 
-<transition name="fade">
-  <div class="menu-container" style="display: none;" v-show="menuVisible">
-    <div class="menu-list">
-      
-        
-          <a href="/" class="menu purple-link">
-            首页
-          </a>
-        
-      
-        
-          <a href="/archives" class="menu purple-link">
-            归档
-          </a>
-        
-      
-        
-          <a href="/tags" class="menu purple-link">
-            标签
-          </a>
-        
-      
-        
-          <a href="https://song-2020.github.io/post/guan-yu-wo/" class="menu purple-link">
-            关于我
-          </a>
-        
-      
-        
-          <a href="http://www.thinkerofbraver.top:8092/user/login" class="menu purple-link">
-            疫情下人员管理系统
-          </a>
-        
-      
-    </div>
-  </div>
-</transition>
-
-
-      <div class="content-container">
         <div class="post-detail">
-          
-          <h2 class="post-title">Java多线程编程</h2>
-          <div class="post-info post-detail-info">
-            <span><i class="icon-calendar-outline"></i> 2020-05-15</span>
+          <article class="post">
+            <h2 class="post-title">
+              Java多线程编程
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-05-15
+              </span>
+              <span>
+                5 min read
+              </span>
+              
+            </div>
             
-          </div>
-          <div class="post-content">
-            <p>#一、定义<br>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>#一、定义<br>
 Java 给多线程编程提供了内置的支持。<br>
 一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。<br>
 多线程是多任务的一种特别的形式，但多线程使用了更小的资源开销。<br>
@@ -150,57 +156,76 @@ Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIO
 通过继承 Thread 类本身；<br>
 通过 Callable 和 Future 创建线程。</p>
 
-          </div>
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
         </div>
 
         
           <div class="next-post">
-            <a class="purple-link" href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
+            <div class="next">下一篇</div>
+            <a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
               <h3 class="post-title">
-                下一篇：关于Java中的集合
+                关于Java中的集合
               </h3>
             </a>
           </div>
-          
-      </div>
+        
 
-      
+        
 
-      <div class="site-footer">
-  <div class="slogan">个人技术博客</div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
-  </div>
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a> | <a class="rss" href="https://song-2020.Github.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a>
+  <a class="rss" href="https://song-2020.Github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-
+      </div>
     </div>
-    <script type="application/javascript">
 
-hljs.initHighlightingOnLoad()
+    <script>
+      hljs.initHighlightingOnLoad()
 
-var app = new Vue({
-  el: '#app',
-  data: {
-    menuVisible: false,
-  },
-})
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
 
-</script>
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
 
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
 
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
 
-
+    </script>
   </body>
 </html>
