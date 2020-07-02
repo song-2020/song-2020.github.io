@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>天空之城</title>
-    <updated>2020-07-02T06:37:41.419Z</updated>
+    <updated>2020-07-02T06:44:13.613Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,71 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 天空之城</rights>
+    <entry>
+        <title type="html"><![CDATA[spring boot技术相关]]></title>
+        <id>https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/</id>
+        <link href="https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/">
+        </link>
+        <updated>2020-07-02T06:39:07.000Z</updated>
+        <content type="html"><![CDATA[<p>一、什么是 Spring Boot<br>
+Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
+化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
+务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
+框架的另一种表现形式。</p>
+<p>二、 Spring Boot 特征<br>
+1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
+2、在Spring Boot中直接嵌入了Tomcat、<br>
+Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
+做 Web 开发时不需要部署 WAR 文件<br>
+3、过提供自己的启动器(Starter)依赖，简化项目构建配置<br>
+4、尽量的自动配置 Spring 和第三方库<br>
+5、提供了生产就绪特征，如：度量指标，运行状况检查和外部化配置<br>
+6、绝对没有代码生成，也不需要 XML 配置文件</p>
+<p>三、Spring Boot 的核心注解<br>
+5.1@SpringBootApplication<br>
+是 SpringBoot 的启动类。<br>
+此注解等同于@Configuration+@EnableAutoConfiguration+@ComponentScan 的组合。<br>
+5.2@SpringBootConfiguration<br>
+@SpringBootConfiguration 注解是@Configuration 注解的派生注解，跟@Configuration<br>
+注解的功能一致，标注这个类是一个配置类，只不过@SpringBootConfiguration 是 springboot<br>
+的注解，而@Configuration 是 spring 的注解<br>
+5.3@Configuration<br>
+通过对 bean 对象的操作替代 spring 中 xml 文件<br>
+5.4@EnableAutoConfiguration<br>
+Spring Boot 自动配置（auto-configuration）：尝试根据你添加的 jar 依赖自动配置你的<br>
+Spring 应用。是@AutoConfigurationPackage 和@Import(AutoConfigurationImportSelector.class)<br>
+注解的组合。<br>
+5.5@AutoConfigurationPackage<br>
+@AutoConfigurationPackage 注解，自动注入主类下所在包下所有的加了注解的类<br>
+（@Controller，@Service 等），以及配置类（@Configuration）<br>
+5.6@Import({AutoConfigurationImportSelector.class})<br>
+直接导入普通的类<br>
+导入实现了 ImportSelector 接口的类<br>
+导入实现了 ImportBeanDefinitionRegistrar 接口的类<br>
+5.7@ComponentScan<br>
+组件扫描，可自动发现和装配一些 Bean。<br>
+5.8@ConfigurationPropertiesScan<br>
+@ConfigurationPropertiesScan 扫描配置属性。@EnableConfigurationProperties 注解的作<br>
+用是使用 @ConfigurationProperties 注解的类生效。</p>
+<p>四、Spring Boot 整合 Thymeleaf<br>
+3.1Thymeleaf 介绍<br>
+Thymeleaf 的主要目标是将优雅的自然模板带到开发工作流程中，并将 HTML 在浏览器<br>
+中正确显示，并且可以作为静态原型，让开发团队能更容易地协作。Thymeleaf 能够处理<br>
+HTML，XML，JavaScript，CSS 甚至纯文本。<br>
+长期以来,jsp 在视图领域有非常重要的地位,随着时间的变迁,出现了一位新的挑战<br>
+者:Thymeleaf,Thymeleaf 是原生的,不依赖于标签库.它能够在接受原始 HTML 的地方进行编<br>
+辑和渲染.因为它没有与Servelet规范耦合,因此Thymeleaf模板能进入jsp所无法涉足的领域。</p>
+<p>Spring Boot 整合mybatis框架<br>
+MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生信息，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。</p>
+<p>generator插件<br>
+可根据配置文件自动为mybatis项目生成mapper和pojo文件</p>
+<p>spring boot热部署<br>
+使用devtools或者jrebel工具</p>
+<p>Spring Boot 度量指标监控与健康检查<br>
+使用 Actuator 检查与监控<br>
+使用可视化监控应用 Spring Boot Admin</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://song-2020.Github.io/post/hello-gridea/</id>
