@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>天空之城</title>
-    <updated>2020-07-02T07:14:17.608Z</updated>
+    <updated>2020-07-02T08:29:52.950Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -16,7 +16,34 @@
         <link href="https://song-2020.Github.io/post/guan-yu-wo/">
         </link>
         <updated>2020-07-02T07:06:41.000Z</updated>
-        <content type="html"><![CDATA[<figure data-type="image" tabindex="1"><img src="https://song-2020.Github.io/post-images/1593674049201.jpg" alt="" loading="lazy"></figure>
+        <content type="html"><![CDATA[<h1 id="基本信息">基本信息</h1>
+<p>电话：18392356603<br>
+邮箱：2402103484@qq.com<br>
+学历：本科<br>
+毕业院校：西安工程大学<br>
+本科层次：一本<br>
+毕业时间：2019.7</p>
+<h1 id="创新项目">创新项目</h1>
+<p>2017年，带队参加西安工程大学2017年“互联网+纺织”大学生创新创业大赛，获得优秀奖。</p>
+<h1 id="获奖情况">获奖情况</h1>
+<p>1、本科阶段获得院级二等奖学金1次，励志奖学金1次<br>
+2、英语六级，计算机二级考试（C语言）成绩优秀<br>
+3、2015—2018年连续三年参加西安工程大学冬季越野赛，并获得“先进个人”<br>
+4、2016年参与组建西安工程大学心心理社译社团，任实践部部长，被评为“优秀学生社团干部”<br>
+5、2017年西安工程大学大学生暑期社会实践活动中被评为“先进个人”<br>
+6、2015至2019年担任班级科技委员，被评为“优秀学生干部”<br>
+7、2019年西安工程大学优秀毕业生</p>
+<h1 id="专业技能">专业技能</h1>
+<p>一、疫情下健康出行人员数据库管理系统<br>
+1、登录及注册功能<br>
+2、对当地出入人员基本信息的管理，包括增删改查<br>
+3、使用spring boot+mysql+mybatis+thymeleaf技术，将信息呈现在网页上并提供相应的功能。<br>
+技术栈：SpringBoot、thymeleaf、Mybatis、Maven、Mysql、Druid</p>
+<h1 id="自我评价">自我评价</h1>
+<p>1、有较强的逻辑思维能力，善于分析、归纳、解决问题<br>
+2、有较强的沟通技巧及团队合作精神，组织协调能力，较强的责任感及进取精神<br>
+3、对技术有浓厚兴趣，喜欢并不断学习新技术<br>
+4、工作细致认真、积极主动、有耐心、严谨</p>
 ]]></content>
     </entry>
     <entry>
