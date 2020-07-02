@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>天空之城</title>
-    <updated>2020-07-02T11:51:36.971Z</updated>
+    <updated>2020-07-02T12:24:55.721Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -11,17 +11,91 @@
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 天空之城</rights>
     <entry>
+        <title type="html"><![CDATA[关于Java中的集合]]></title>
+        <id>https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/</id>
+        <link href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
+        </link>
+        <updated>2020-07-02T12:13:02.000Z</updated>
+        <content type="html"><![CDATA[<p>#一、概述<br>
+<img src="https://song-2020.Github.io/post-images/1593692066544.png" alt="" loading="lazy"><br>
+#二、Java集合框架图<br>
+<img src="https://song-2020.Github.io/post-images/1593692291195.png" alt="" loading="lazy"><br>
+集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：<br>
+接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象<br>
+实现（类）：是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。<br>
+算法：是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。<br>
+除了集合，该框架也定义了几个 Map 接口和类。Map 里存储的是键/值对。尽管 Map 不是集合，但是它们完全整合在集合中。<br>
+#三、集合框架体系<br>
+<img src="https://song-2020.Github.io/post-images/1593692402821.png" alt="" loading="lazy"><br>
+#四、关于线程安全<br>
+##1、线程安全(Thread-safe)的集合对象：<br>
+Vector 、HashTable 、StringBuffer 、stackenumeration<br>
+##2、非线程安全的集合对象：<br>
+ArrayList 、LinkedList、HashMap、HashSet、TreeMap、TreeSet、StringBulider</p>
+<p>#五、总结:</p>
+<p>##Connection接口:</p>
+<p>—  List 有序,可重复<br>
+ArrayList<br>
+Arraylist默认数组大小是10，扩容后的大小是扩容前的1.5倍，最大值小于Integer 的最大值减8，如果新创建的集合有带初始值，默认就是传入的大小，也就不会扩容<br>
+优点: 底层数据结构是数组，查询快，增删慢。<br>
+缺点: 线程不安全，效率高<br>
+Vector<br>
+优点: 底层数据结构是数组，查询快，增删慢。<br>
+缺点: 线程安全，效率低<br>
+LinkedList<br>
+优点: 底层数据结构是链表，查询慢，增删快。<br>
+缺点: 线程不安全，效率高</p>
+<p>—Set    无序,不可重复<br>
+TreeSet, LinkedHashSet and HashSet 在java中都是实现Set的数据结构<br>
+TreeSet, LinkedHashSet and HashSet 的区别：<br>
+TreeSet的主要功能用于排序<br>
+LinkedHashSet的主要功能用于保证FIFO即有序的集合(先进先出)<br>
+HashSet只是通用的存储数据的集合<br>
+相同点：Duplicates elements: 因为三者都实现Set interface，所以三者都不包含duplicate elements<br>
+Thread safety: 三者都不是线程安全的，如果要使用线程安全可以Collections.synchronizedSet()<br>
+不同点：Performance and Speed: HashSet插入数据最快，其次LinkHashSet，最慢的是TreeSet因为内部实现排序<br>
+Ordering: HashSet不保证有序，LinkHashSet保证FIFO即按插入顺序排序，TreeSet安装内部实现排序，也可以自定义排序规则<br>
+null:HashSet和LinkHashSet允许存在null数据，但是TreeSet中插入null数据时会报NullPointerException</p>
+<p>HashSet<br>
+底层数据结构是哈希表。(无序,唯一)<br>
+如何来保证元素唯一性?<br>
+1.依赖两个方法：hashCode()和equals()<br>
+LinkedHashSet<br>
+底层数据结构是链表和哈希表。(FIFO插入有序,唯一)<br>
+1.由链表保证元素有序<br>
+2.由哈希表保证元素唯一<br>
+TreeSet<br>
+底层数据结构是红黑树。(唯一，有序)</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Java常用基础知识]]></title>
+        <id>https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/</id>
+        <link href="https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/">
+        </link>
+        <updated>2020-07-02T12:06:05.000Z</updated>
+        <content type="html"><![CDATA[<p>#java关键字<br>
+<img src="https://song-2020.Github.io/post-images/1593691681351.png" alt="" loading="lazy"><br>
+#Java三大特性<br>
+封装主要是隐藏内部代码；<br>
+继承主要是复用现有代码；<br>
+多态主要是改写对象行为。<br>
+#各种变量的默认值及默认值<br>
+<img src="https://song-2020.Github.io/post-images/1593691916709.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[Spring boot技术相关]]></title>
         <id>https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/</id>
         <link href="https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/">
         </link>
         <updated>2020-07-02T06:39:07.000Z</updated>
-        <content type="html"><![CDATA[<p>一、什么是 Spring Boot<br>
+        <content type="html"><![CDATA[<p>#一、什么是 Spring Boot<br>
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
 务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
 框架的另一种表现形式。</p>
-<p>二、 Spring Boot 特征<br>
+<p>#二、 Spring Boot 特征<br>
 1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
 2、在Spring Boot中直接嵌入了Tomcat、<br>
 Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
@@ -30,7 +104,7 @@ Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
 4、尽量的自动配置 Spring 和第三方库<br>
 5、提供了生产就绪特征，如：度量指标，运行状况检查和外部化配置<br>
 6、绝对没有代码生成，也不需要 XML 配置文件</p>
-<p>三、Spring Boot 的核心注解<br>
+<p>#三、Spring Boot 的核心注解<br>
 5.1@SpringBootApplication<br>
 是 SpringBoot 的启动类。<br>
 此注解等同于@Configuration+@EnableAutoConfiguration+@ComponentScan 的组合。<br>
@@ -56,7 +130,7 @@ Spring 应用。是@AutoConfigurationPackage 和@Import(AutoConfigurationImportS
 5.8@ConfigurationPropertiesScan<br>
 @ConfigurationPropertiesScan 扫描配置属性。@EnableConfigurationProperties 注解的作<br>
 用是使用 @ConfigurationProperties 注解的类生效。</p>
-<p>四、Spring Boot 整合 Thymeleaf<br>
+<p>#四、Spring Boot 整合 Thymeleaf<br>
 3.1Thymeleaf 介绍<br>
 Thymeleaf 的主要目标是将优雅的自然模板带到开发工作流程中，并将 HTML 在浏览器<br>
 中正确显示，并且可以作为静态原型，让开发团队能更容易地协作。Thymeleaf 能够处理<br>
@@ -73,6 +147,21 @@ MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过�
 <p>Spring Boot 度量指标监控与健康检查<br>
 使用 Actuator 检查与监控<br>
 使用可视化监控应用 Spring Boot Admin</p>
+<p>#五、 关于Spring<br>
+Spring是一系列轻量级Java EE框架的集合<br>
+Spring中包含一个“依赖注入”模式的实现<br>
+使用Spring可以实现声明式事务</p>
+<p>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。<br>
+轻量——从大小与开销两方面而言Spring都是轻量的。完整的Spring框架可以在一个大小只有1MB多的JAR文件里发布。并且Spring所需的处理开销也是微不足道的。此外，Spring是非侵入式的：典型地，Spring应用中的对象不依赖于Spring的特定类。<br>
+控制反转——Spring通过一种称作控制反转（IoC）的技术促进了松耦合。当应用了IoC，一个对象依赖的其它对象会通过被动的方式传递进来，而不是这个对象自己创建或者查找依赖对象。你可以认为IoC与JNDI相反——不是对象从容器中查找依赖，而是容器在对象初始化时不等对象请求就主动将依赖传递给它。<br>
+面向切面——Spring提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务（例如审计（auditing）和事务（transaction）管理）进行内聚性的开发。应用对象只实现它们应该做的——完成业务逻辑——仅此而已。它们并不负责（甚至是意识）其它的系统级关注点，例如日志或事务支持。<br>
+容器——Spring包含并管理应用对象的配置和生命周期，在这个意义上它是一种容器，你可以配置你的每个bean如何被创建——基于一个可配置原型（prototype），你的bean可以创建一个单独的实例或者每次需要时都生成一个新的实例——以及它们是如何相互关联的。然而，Spring不应该被混同于传统的重量级的EJB容器，它们经常是庞大与笨重的，难以使用。<br>
+框架——Spring可以将简单的组件配置、组合成为复杂的应用。在Spring中，应用对象被声明式地组合，典型地是在一个XML文件里。Spring也提供了很多基础功能（事务管理、持久化框架集成等等），将应用逻辑的开发留给了你。</p>
+<p>spring没有提供AOP方式的日志系统。<br>
+AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态***实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。<br>
+Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系统。</p>
+<p>spring由哪些框架组成？<br>
+spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core context</p>
 ]]></content>
     </entry>
 </feed>

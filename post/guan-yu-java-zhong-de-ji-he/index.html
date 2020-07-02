@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>关于Java中的集合 | 天空之城</title>
+<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593692690867">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="关于Java中的集合 | 天空之城 - Atom Feed" href="https://song-2020.Github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="#一、概述
+
+#二、Java集合框架图
+
+集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：
+接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://song-2020.Github.io">
+  <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593692690867" alt="">
+  </a>
+  <h1 class="site-title">
+    天空之城
+  </h1>
+  <p class="site-description">
+    个人技术博客
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="https://song-2020.github.io/post/guan-yu-wo/" class="menu">
+          关于我
+        </a>
+      
+    
+      
+        <a href="http://www.thinkerofbraver.top:8092/user/login" class="menu">
+          疫情下人员管理系统
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              关于Java中的集合
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-07-02
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <p>#一、概述<br>
+<img src="https://song-2020.Github.io/post-images/1593692066544.png" alt="" loading="lazy"><br>
+#二、Java集合框架图<br>
+<img src="https://song-2020.Github.io/post-images/1593692291195.png" alt="" loading="lazy"><br>
+集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：<br>
+接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象<br>
+实现（类）：是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。<br>
+算法：是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。<br>
+除了集合，该框架也定义了几个 Map 接口和类。Map 里存储的是键/值对。尽管 Map 不是集合，但是它们完全整合在集合中。<br>
+#三、集合框架体系<br>
+<img src="https://song-2020.Github.io/post-images/1593692402821.png" alt="" loading="lazy"><br>
+#四、关于线程安全<br>
+##1、线程安全(Thread-safe)的集合对象：<br>
+Vector 、HashTable 、StringBuffer 、stackenumeration<br>
+##2、非线程安全的集合对象：<br>
+ArrayList 、LinkedList、HashMap、HashSet、TreeMap、TreeSet、StringBulider</p>
+<p>#五、总结:</p>
+<p>##Connection接口:</p>
+<p>—  List 有序,可重复<br>
+ArrayList<br>
+Arraylist默认数组大小是10，扩容后的大小是扩容前的1.5倍，最大值小于Integer 的最大值减8，如果新创建的集合有带初始值，默认就是传入的大小，也就不会扩容<br>
+优点: 底层数据结构是数组，查询快，增删慢。<br>
+缺点: 线程不安全，效率高<br>
+Vector<br>
+优点: 底层数据结构是数组，查询快，增删慢。<br>
+缺点: 线程安全，效率低<br>
+LinkedList<br>
+优点: 底层数据结构是链表，查询慢，增删快。<br>
+缺点: 线程不安全，效率高</p>
+<p>—Set    无序,不可重复<br>
+TreeSet, LinkedHashSet and HashSet 在java中都是实现Set的数据结构<br>
+TreeSet, LinkedHashSet and HashSet 的区别：<br>
+TreeSet的主要功能用于排序<br>
+LinkedHashSet的主要功能用于保证FIFO即有序的集合(先进先出)<br>
+HashSet只是通用的存储数据的集合<br>
+相同点：Duplicates elements: 因为三者都实现Set interface，所以三者都不包含duplicate elements<br>
+Thread safety: 三者都不是线程安全的，如果要使用线程安全可以Collections.synchronizedSet()<br>
+不同点：Performance and Speed: HashSet插入数据最快，其次LinkHashSet，最慢的是TreeSet因为内部实现排序<br>
+Ordering: HashSet不保证有序，LinkHashSet保证FIFO即按插入顺序排序，TreeSet安装内部实现排序，也可以自定义排序规则<br>
+null:HashSet和LinkHashSet允许存在null数据，但是TreeSet中插入null数据时会报NullPointerException</p>
+<p>HashSet<br>
+底层数据结构是哈希表。(无序,唯一)<br>
+如何来保证元素唯一性?<br>
+1.依赖两个方法：hashCode()和equals()<br>
+LinkedHashSet<br>
+底层数据结构是链表和哈希表。(FIFO插入有序,唯一)<br>
+1.由链表保证元素有序<br>
+2.由哈希表保证元素唯一<br>
+TreeSet<br>
+底层数据结构是红黑树。(唯一，有序)</p>
+
+              </div>
+              <div class="toc-container">
+                
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/">
+              <h3 class="post-title">
+                Java常用基础知识
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a>
+  <a class="rss" href="https://song-2020.Github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

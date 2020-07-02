@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Spring boot技术相关 | 天空之城</title>
-<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593690694396">
+<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593692690867">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <link rel="alternate" type="application/atom+xml" title="Spring boot技术相关 | 天空之城 - Atom Feed" href="https://song-2020.Github.io/atom.xml">
@@ -11,10 +11,10 @@
 
 
 
-    <meta name="description" content="一、什么是 Spring Boot
+    <meta name="description" content="#一、什么是 Spring Boot
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服
-务于框架..." />
+务于框..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -24,7 +24,7 @@ Spring Boot 是一个框架，一种全新的编程规范，他的产生简化�
       <div class="main-content">
         <div class="site-header">
   <a href="https://song-2020.Github.io">
-  <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593690694396" alt="">
+  <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593692690867" alt="">
   </a>
   <h1 class="site-title">
     天空之城
@@ -90,19 +90,19 @@ Spring Boot 是一个框架，一种全新的编程规范，他的产生简化�
                 2020-07-02
               </span>
               <span>
-                4 min read
+                6 min read
               </span>
               
             </div>
             
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p>一、什么是 Spring Boot<br>
+                <p>#一、什么是 Spring Boot<br>
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
 务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
 框架的另一种表现形式。</p>
-<p>二、 Spring Boot 特征<br>
+<p>#二、 Spring Boot 特征<br>
 1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
 2、在Spring Boot中直接嵌入了Tomcat、<br>
 Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
@@ -111,7 +111,7 @@ Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
 4、尽量的自动配置 Spring 和第三方库<br>
 5、提供了生产就绪特征，如：度量指标，运行状况检查和外部化配置<br>
 6、绝对没有代码生成，也不需要 XML 配置文件</p>
-<p>三、Spring Boot 的核心注解<br>
+<p>#三、Spring Boot 的核心注解<br>
 5.1@SpringBootApplication<br>
 是 SpringBoot 的启动类。<br>
 此注解等同于@Configuration+@EnableAutoConfiguration+@ComponentScan 的组合。<br>
@@ -137,7 +137,7 @@ Spring 应用。是@AutoConfigurationPackage 和@Import(AutoConfigurationImportS
 5.8@ConfigurationPropertiesScan<br>
 @ConfigurationPropertiesScan 扫描配置属性。@EnableConfigurationProperties 注解的作<br>
 用是使用 @ConfigurationProperties 注解的类生效。</p>
-<p>四、Spring Boot 整合 Thymeleaf<br>
+<p>#四、Spring Boot 整合 Thymeleaf<br>
 3.1Thymeleaf 介绍<br>
 Thymeleaf 的主要目标是将优雅的自然模板带到开发工作流程中，并将 HTML 在浏览器<br>
 中正确显示，并且可以作为静态原型，让开发团队能更容易地协作。Thymeleaf 能够处理<br>
@@ -154,6 +154,21 @@ MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过�
 <p>Spring Boot 度量指标监控与健康检查<br>
 使用 Actuator 检查与监控<br>
 使用可视化监控应用 Spring Boot Admin</p>
+<p>#五、 关于Spring<br>
+Spring是一系列轻量级Java EE框架的集合<br>
+Spring中包含一个“依赖注入”模式的实现<br>
+使用Spring可以实现声明式事务</p>
+<p>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。<br>
+轻量——从大小与开销两方面而言Spring都是轻量的。完整的Spring框架可以在一个大小只有1MB多的JAR文件里发布。并且Spring所需的处理开销也是微不足道的。此外，Spring是非侵入式的：典型地，Spring应用中的对象不依赖于Spring的特定类。<br>
+控制反转——Spring通过一种称作控制反转（IoC）的技术促进了松耦合。当应用了IoC，一个对象依赖的其它对象会通过被动的方式传递进来，而不是这个对象自己创建或者查找依赖对象。你可以认为IoC与JNDI相反——不是对象从容器中查找依赖，而是容器在对象初始化时不等对象请求就主动将依赖传递给它。<br>
+面向切面——Spring提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务（例如审计（auditing）和事务（transaction）管理）进行内聚性的开发。应用对象只实现它们应该做的——完成业务逻辑——仅此而已。它们并不负责（甚至是意识）其它的系统级关注点，例如日志或事务支持。<br>
+容器——Spring包含并管理应用对象的配置和生命周期，在这个意义上它是一种容器，你可以配置你的每个bean如何被创建——基于一个可配置原型（prototype），你的bean可以创建一个单独的实例或者每次需要时都生成一个新的实例——以及它们是如何相互关联的。然而，Spring不应该被混同于传统的重量级的EJB容器，它们经常是庞大与笨重的，难以使用。<br>
+框架——Spring可以将简单的组件配置、组合成为复杂的应用。在Spring中，应用对象被声明式地组合，典型地是在一个XML文件里。Spring也提供了很多基础功能（事务管理、持久化框架集成等等），将应用逻辑的开发留给了你。</p>
+<p>spring没有提供AOP方式的日志系统。<br>
+AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态***实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。<br>
+Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系统。</p>
+<p>spring由哪些框架组成？<br>
+spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core context</p>
 
               </div>
               <div class="toc-container">
