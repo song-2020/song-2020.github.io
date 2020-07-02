@@ -1,103 +1,98 @@
+
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+<meta charset="utf-8" >
+
 <title>Spring boot技术相关 | 天空之城</title>
-<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593692788174">
-<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<meta name="description" content="个人技术博客">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico?v=1593694586772">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="Spring boot技术相关 | 天空之城 - Atom Feed" href="https://song-2020.Github.io/atom.xml">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="#一、什么是 Spring Boot
-Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简
-化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服
-务于框..." />
-    <meta name="keywords" content="" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+
+
   </head>
   <body>
-    <div class="main">
-      <div class="main-content">
-        <div class="site-header">
-  <a href="https://song-2020.Github.io">
-  <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593692788174" alt="">
-  </a>
-  <h1 class="site-title">
-    天空之城
-  </h1>
-  <p class="site-description">
-    个人技术博客
-  </p>
-  <div class="menu-container">
-    
-      
-        <a href="/" class="menu">
-          首页
-        </a>
-      
-    
-      
-        <a href="/archives" class="menu">
-          归档
-        </a>
-      
-    
-      
-        <a href="/tags" class="menu">
-          标签
-        </a>
-      
-    
-      
-        <a href="https://song-2020.github.io/post/guan-yu-wo/" class="menu">
-          关于我
-        </a>
-      
-    
-      
-        <a href="http://www.thinkerofbraver.top:8092/user/login" class="menu">
-          疫情下人员管理系统
-        </a>
-      
-    
-  </div>
-  <div class="social-container">
-    
-      
-    
-      
-    
-      
-    
-      
-    
-      
-    
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://song-2020.Github.io">
+        <img class="avatar" src="https://song-2020.Github.io/images/avatar.png?v=1593694586772" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://song-2020.Github.io">
+        <h1 class="site-title">天空之城</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
   </div>
 </div>
 
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="https://song-2020.github.io/post/guan-yu-wo/" class="menu purple-link">
+            关于我
+          </a>
+        
+      
+        
+          <a href="http://www.thinkerofbraver.top:8092/user/login" class="menu purple-link">
+            疫情下人员管理系统
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
         <div class="post-detail">
-          <article class="post">
-            <h2 class="post-title">
-              Spring boot技术相关
-            </h2>
-            <div class="post-info">
-              <span>
-                2020-07-02
-              </span>
-              <span>
-                6 min read
-              </span>
-              
-            </div>
+          
+          <h2 class="post-title">Spring boot技术相关</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2020-07-02</span>
             
-            <div class="post-content-wrapper">
-              <div class="post-content">
-                <p>#一、什么是 Spring Boot<br>
+          </div>
+          <div class="post-content">
+            <p>#一、什么是 Spring Boot<br>
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
 务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
@@ -170,67 +165,49 @@ Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系
 <p>spring由哪些框架组成？<br>
 spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core context</p>
 
-              </div>
-              <div class="toc-container">
-                
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
 
         
+      </div>
 
-        
+      
 
-        <div class="site-footer">
-  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a>
-  <a class="rss" href="https://song-2020.Github.io/atom.xml" target="_blank">
-    <i class="ri-rss-line"></i> RSS
-  </a>
+      <div class="site-footer">
+  <div class="slogan">个人技术博客</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a> | <a class="rss" href="https://song-2020.Github.io/atom.xml" target="_blank">RSS</a>
 </div>
 
-      </div>
+
     </div>
+    <script type="application/javascript">
 
-    <script>
-      hljs.initHighlightingOnLoad()
+hljs.initHighlightingOnLoad()
 
-      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-      // This should probably be throttled.
-      // Especially because it triggers during smooth scrolling.
-      // https://lodash.com/docs/4.17.10#throttle
-      // You could do like...
-      // window.addEventListener("scroll", () => {
-      //    _.throttle(doThatStuff, 100);
-      // });
-      // Only not doing it here to keep this Pen dependency-free.
+</script>
 
-      window.addEventListener("scroll", event => {
-        let fromTop = window.scrollY;
 
-        mainNavLinks.forEach((link, index) => {
-          let section = document.getElementById(decodeURI(link.hash).substring(1));
-          let nextSection = null
-          if (mainNavLinks[index + 1]) {
-            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
-          }
-          if (section.offsetTop <= fromTop) {
-            if (nextSection) {
-              if (nextSection.offsetTop > fromTop) {
-                link.classList.add("current");
-              } else {
-                link.classList.remove("current");    
-              }
-            } else {
-              link.classList.add("current");
-            }
-          } else {
-            link.classList.remove("current");
-          }
-        });
-      });
 
-    </script>
+
   </body>
 </html>
