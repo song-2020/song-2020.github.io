@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
-    <title>彩虹桥</title>
-    <updated>2020-07-05T15:48:56.008Z</updated>
+    <title>脚踏实地，仰望星空</title>
+    <updated>2020-07-05T15:53:52.561Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
     <subtitle>个人技术博客</subtitle>
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 彩虹桥</rights>
+    <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
     <entry>
         <title type="html"><![CDATA[synchronized与volatile]]></title>
         <id>https://song-2020.Github.io/post/synchronized-yu-volatile/</id>
