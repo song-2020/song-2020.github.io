@@ -1,163 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-<title>彩虹桥</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-<meta name="description" content="个人技术博客"/>
-<meta name="keywords" content="个人技术博客"/>
-
-<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-<link rel="shortcut icon" href="https://song-2020.Github.io/favicon.ico">
-
-<link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
-
-<!-- Modernizr JS -->
-<script src="https://song-2020.Github.io/media/scripts/modernizr-2.6.2.min.js"></script>
-<!-- FOR IE9 below -->
-<!--[if lt IE 9]>
-<scripts src="https://song-2020.Github.io/media/scripts/respond.min.js"></scripts>
-<![endif]-->
-
-<!-- Comment -->
-
-
-
-<!-- katex -->
-<!--<link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet">-->
-
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.min.css" rel="stylesheet">
-
-
-
+    <meta charset="UTF-8">
+    <title>彩虹桥</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/css/mdui.min.css">
+    <link rel="stylesheet" href="/media/css/post.css">
+    <link rel="stylesheet" href="/media/live2d/css/live2d.css" />
+    
 </head>
-<body>
-    <div id="fh5co-offcanvas">
-    <a href="#!" class="fh5co-close-offcanvas js-fh5co-close-offcanvas">
-        <span><i class="icon-cross3"></i> <span>Close</span></span>
-    </a>
-    <div class="fh5co-bio">
-        <figure>
-            <img src="https://song-2020.Github.io/images/avatar.png" alt="彩虹桥"
-                 class="img-responsive">
-        </figure>
-        <a href="https://song-2020.Github.io/post/about/"><h3 class="heading">ABOUT ME</h3></a>
-        <h2>彩虹桥</h2>
-        <p>个人技术博客</p>
-        <ul class="fh5co-social">
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-                <li>
-                    
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="fh5co-menu">
-
-        <!-- 标签 -->
-        <div class="fh5co-box">
-            <a href="https://song-2020.Github.io/tags/"><h3 class="heading">👉标签</h3></a>
-            <ul>
-                
-            </ul>
-        </div>
-    </div>
-</div>
-
-<header id="fh5co-header">
-    <div class="container-fluid">
-        <div class="row">
-            <a href="#" class="js-fh5co-nav-toggle fh5co-nav-toggle"><i></i></a>
-            <ul class="fh5co-social">
-                
-                    <li>
-                        <a href="/"
-                        
-                        >
-                            首页
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="/archives"
-                        
-                        >
-                            归档
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="https://song-2020.github.io/post/guan-yu-wo/"
-                        
-                        >
-                            关于我
-                        </a>
-                    </li>
-                
-                    <li>
-                        <a href="http://www.thinkerofbraver.top:8092/user/login"
-                        
-                        >
-                            疫情下人员管理系统
-                        </a>
-                    </li>
-                
-            </ul>
-            <div class="col-lg-12 col-md-12 text-center">
-                <h1 id="fh5co-logo">
-                    <a href="https://song-2020.Github.io">彩虹桥 </a>
-                </h1>
-            </div>
-        </div>
-    </div>
+<body class=" mdui-appbar-with-toolbar  mdui-theme-primary-pink mdui-theme-accent-pink">
+<header class="mdui-toolbar mdui-color-pink mdui-appbar-fixed mdui-appbar-scroll-toolbar-hide" style="z-index: 1000">
+    <a href="javascript:;" mdui-drawer="{target: '#left-drawer',overlay:true}" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">menu</i></a>
+    <span class="mdui-typo-title">彩虹桥</span>
+    <div class="mdui-toolbar-spacer"></div>
+<!--    <a href="javascript:history.go(0);" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">more_vert</i></a>
 </header>
 
+<div class="mdui-drawer mdui-color-white mdui-drawer-full-height mdui-drawer-close" id="left-drawer">
+    <ul class="mdui-list">
+        <li class="mdui-subheader">菜单</li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="/" class="mdui-list-item-content">首页</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="/archives" class="mdui-list-item-content">归档</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="https://song-2020.github.io/post/guan-yu-wo/" class="mdui-list-item-content">关于我</a>
+        </li>
+        
+        <li class="mdui-list-item mdui-ripple">
+            <a href="http://www.thinkerofbraver.top:8092/user/login" class="mdui-list-item-content">疫情下人员管理系统</a>
+        </li>
+        
+    </ul>
+</div>
 
-    <!--  <a href="#" class="fh5co-post-prev"><span>👈 Prev</span></a>-->
-    <!--  <a href="#" class="fh5co-post-next"><span>Next 👉</span></a>-->
-
-    <!-- 等gridea出自定义页面功能再优化一下 -->
-    
-        <div class="container-fluid">
-    <div class="row fh5co-post-entry single-entry">
-        <article class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-12 col-xs-offset-0">
-            <figure class="animate-box">
-                
-            </figure>
-            <span class="fh5co-meta animate-box">
-                
-            </span>
-            <h2 class="fh5co-article-title animate-box">Java多线程编程</h2>
-            <ol class="breadcrumb fh5co-meta fh5co-date animate-box" style="margin-bottom:0; background-color:#f8f9fa">
-                <li>2020-05-15</li>
-                <li>1267字</li>
-                <li>5 min read</li>
-            </ol>
-
-            <div class="col-lg-12 col-lg-offset-0 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0 text-left content-article">
-                <div class="row">
-                    <div class="col-md-12 animate-box post-content">
-                        <p> <p>#一、定义<br>
+<div id="content" class="site-content">
+    <div id="primary" class="content-area">
+        <main id="main" class="site-main" role="main">
+            <article id="post-1270" class="post-1270 post type-post status-publish format-standard hentry category-90 category-129 tag-149">
+                <header class="entry-header">
+                    <h1 class="entry-title">Java多线程编程</h1>
+                    <p class="entry-census">发布于 2020-05-15</p>
+                    <hr>
+                </header>
+                <div class="neko">
+                    <p>#一、定义<br>
 Java 给多线程编程提供了内置的支持。<br>
 一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。<br>
 多线程是多任务的一种特别的形式，但多线程使用了更小的资源开销。<br>
@@ -214,100 +112,100 @@ Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIO
 通过实现 Runnable 接口；<br>
 通过继承 Thread 类本身；<br>
 通过 Callable 和 Future 创建线程。</p>
- </p>
-                    </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-12 animate-box">
-                        
-                            <div class="next-post">
-                                <div class="next">下一篇</div>
-                                <a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
-                                    <h3 class="post-title">
-                                        关于Java中的集合
-                                    </h3>
-                                </a>
-                            </div>
-                        
-                    </div>
                 </div>
-
-                <div class="row">
-    <div class="col-md-12 animate-box">
-        
+            </article>
+        </main>
     </div>
-</div>
-
+    <div class="doc-footer-nav mdui-color-theme">
+        <div class="mdui-container">
+            <div class="mdui-row">
+                
+                <div class="mdui-col-xs-2 mdui-col-sm-6 doc-footer-nav-left"></div>
+                
+                
+                <a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/" class="mdui-ripple mdui-color-theme mdui-col-xs-10 mdui-col-sm-6 doc-footer-nav-right">
+                    <div class="doc-footer-nav-text">
+                        <i class="mdui-icon material-icons">arrow_forward</i>
+                        <span class="doc-footer-nav-direction">下一篇文章</span>
+                        <div class="doc-footer-nav-chapter">关于Java中的集合</div>
+                    </div>
+                </a>
+                
             </div>
+        </div>
+    </div>
+    <br>
+    
+    <div class="comment"></div>
+</div>
+<footer class="mdui-container footer ">
+    <div class="head_card-offset"></div>
+    <div class="mdui-row mdui-row-gapless">
+        <div class="k-container">
+            <img width="100%" src="/media/img/skirt.png">
+        </div>
+    </div>
 
-        </article>
+    <div class="site-info">
+        Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a>
+    </div>
+</footer>
+<div id="landlord" style="left:5px;bottom:0px;">
+    <div class="message" style="opacity:0"></div>
+    <canvas id="live2d" width="500" height="560" class="live2d"></canvas>
+    <div class="live_talk_input_body">
+        <div class="live_talk_input_name_body">
+            <input name="name" type="text" class="live_talk_name white_input" id="AIuserName" autocomplete="off" placeholder="你的名字" />
+        </div>
+        <div class="live_talk_input_text_body">
+            <input name="talk" type="text" class="live_talk_talk white_input" id="AIuserText" autocomplete="off" placeholder="要和我聊什么呀？"/>
+            <button type="button" class="live_talk_send_btn" id="talk_send">发送</button>
+        </div>
+    </div>
+    <input name="live_talk" id="live_talk" value="1" type="hidden" />
+    <div class="live_ico_box">
+        <div class="live_ico_item type_info" id="showInfoBtn"></div>
+        <div class="live_ico_item type_talk" id="showTalkBtn"></div>
+        <div class="live_ico_item type_music" id="musicButton"></div>
+        <div class="live_ico_item type_youdu" id="youduButton"></div>
+        <div class="live_ico_item type_quit" id="hideButton"></div>
+        <input name="live_statu_val" id="live_statu_val" value="0" type="hidden" />
+        <audio src="" style="display:none;" id="live2d_bgm" data-bgm="0" preload="none"></audio>
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input name="live2dBGM" value="https://img.apa70.com/123.mp3" type="hidden">
+        <input id="duType" value="douqilai,l2d_caihong" type="hidden">
     </div>
 </div>
-
-    
-
-    <!-- 返回顶部 -->
-    <div class="back-to-top">
-    
-    <a href="#top" class="hidden-xs hidden-sm"><i class="fa fa-paper-plane"></i></a>
-</div>
-
-<div class="post-toc animated fadeInRight hidden-xs hidden-sm" style="display: none;">
-    
-</div>
-
-
-    
-<footer id="fh5co-footer">
-  <p>Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Song</a></p>
-</footer>
-
-
-    <!-- jQuery -->
-<script src="https://song-2020.Github.io/media/scripts/jquery.min.js"></script>
-<!-- img lazy load -->
-<script src="https://song-2020.Github.io/media/scripts/jquery.lazyload.min.js"></script>
-<!-- jQuery Easing -->
-<script src="https://song-2020.Github.io/media/scripts/jquery.easing.1.3.js"></script>
-<!-- Bootstrap -->
-<script src="https://song-2020.Github.io/media/scripts/bootstrap.min.js"></script>
-<!-- Waypoints -->
-<script src="https://song-2020.Github.io/media/scripts/jquery.waypoints.min.js"></script>
-<!-- Main JS -->
-<script src="https://song-2020.Github.io/media/scripts/main.js"></script>
-<!-- Md5 Min JS -->
-<script src="https://song-2020.Github.io/media/scripts/md5.min.js"></script>
-<!-- katex -->
-<!--<script src="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.js"></script>-->
-<!-- highlight -->
-<script src="https://cdn.bootcss.com/highlight.js/9.15.8/highlight.min.js"></script>
-
-
-<script type="application/javascript">
-    // 代码高亮
-    hljs.initHighlightingOnLoad();
-
-    // img 懒加载
-    $(function () {
-        $("img.lazy").lazyload({
-            effect: "fadeIn",  // 懒加载动画
-            threshold: 180  // 在图片距离屏幕180px时提前载入
-        });
-        // tooltip
-        $('[data-toggle="tooltip"]').tooltip();
-
-        // 目录
-        $('#tool-toc').click(function () {
-            $('.post-toc').toggle();
-        });
-    });
-
-    
+<div id="open_live2d">召唤伊斯特瓦尔</div>
+<script>
+    var message_Path = '/media/live2d/';//资源目录，如果目录不对请更改
+    var talkAPI = "";//如果有类似图灵机器人的聊天接口请填写接口路径
 </script>
-
-
-
+<!--<script src="/media/js/jquery-3.3.1.min.js"></script>-->
+<script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript" src="/media/live2d/js/live2d.js"></script>
+<script type="text/javascript" src="/media/live2d/js/message.js"></script>
 
 </body>
+<script src="//cdnjs.loli.net/ajax/libs/mdui/0.4.3/js/mdui.min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+    $('.comment').bind('DOMNodeInserted',()=>{
+        $('.comment').unbind()
+
+        $('.vbtn').addClass(' mdui-btn mdui-color-theme-accent mdui-ripple')
+    })
+
+    let valine = new Valine({
+        el: '.comment',
+        
+        
+        
+        path: window.location.pathname,
+        pageSize: 30,
+        avatar:'mm',
+        notify:true
+    })
+</script>
 </html>
