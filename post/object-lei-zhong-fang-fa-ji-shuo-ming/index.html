@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>Java多线程编程 | 彩虹桥</title>	
+<title>Object 类中方法及说明 | 彩虹桥</title>	
 
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <script type="text/javascript">
@@ -148,10 +148,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">Java多线程编程</h1>
+			<h1 class="wow swing entry-title">Object 类中方法及说明</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-15 21:27:03" itemprop="datePublished" pubdate="">2020-05-15</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-06-25 23:34:34" itemprop="datePublished" pubdate="">2020-06-25</time></i>
 	          </div>
 			
 </span>
@@ -159,63 +159,18 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<p>#一、定义<br>
-Java 给多线程编程提供了内置的支持。<br>
-一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。<br>
-多线程是多任务的一种特别的形式，但多线程使用了更小的资源开销。<br>
-这里定义和线程相关的另一个术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。<br>
-一个线程不能独立的存在，它必须是进程的一部分。<br>
-一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。<br>
-多线程能满足程序员编写高效率的程序来达到充分利用 CPU 的目的。</p>
-<p>多进程：<br>
-• 当前的操作系统都是多任务OS<br>
-• 每个独立执行的任务就是一个进程<br>
-• OS将时间划分为多个时间片（时间很短）<br>
-• 每个时间片内将CPU分配给某一个任务，时间片结束， CPU将自动回收，再分配给另外任务。从外部看，所有任 务是同时在执行。但是在CPU上，任务是按照串行依次运 行（单核CPU）。如果是多核，多个进程任务可以并行。 但是单个核上，多进程只能串行执行。<br>
-• 多进程的优点<br>
-–可以同时运行多个任务<br>
-–程序因IO堵塞时，可以释放CPU，让CPU为其他程序服务<br>
-–当系统有多个CPU时，可以为多个程序同时服务<br>
-• 我们的CPU不再提高频率，而是提高核数<br>
-• 多核和并行程序才是提高程序性能的唯一办法<br>
-• 多进程的缺点<br>
-–太笨重，不好管理<br>
-–太笨重，不好切换</p>
-<p>多线程：<br>
-• 一个程序可以包括多个子任务，可串/并行<br>
-• 每个子任务可以称为一个线程<br>
-• 如果一个子任务阻塞，程序可以将CPU调度另外一个子任 务进行工作。这样CPU还是保留在本程序中，而不是被调 度到别的程序(进程)去。这样，提高本程序所获得CPU时间 和利用率。</p>
-<p>多进程和多线程对比<br>
-–线程共享数据<br>
-–线程通讯更高效<br>
-–线程更轻量级，更容易切换<br>
-–多个线程更容易管理</p>
-<p>#二、一个线程的生命周期<br>
-线程是一个动态执行的过程，它也有一个从产生到死亡的过程。<br>
-下图显示了一个线程完整的生命周期。<br>
-<img src="https://song-2020.Github.io/post-images/1593696513463.png" alt="" loading="lazy"><br>
-新建状态:<br>
-使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。<br>
-就绪状态:<br>
-当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。<br>
-运行状态:<br>
-如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。<br>
-阻塞状态:<br>
-如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。可以分为三种：<br>
-等待阻塞：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。<br>
-同步阻塞：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。<br>
-其他阻塞：通过调用线程的 sleep() 或 join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O 处理完毕，线程重新转入就绪状态。<br>
-死亡状态:<br>
-一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
-<p>#三、线程的优先级<br>
-每一个 Java 线程都有一个优先级，这样有助于操作系统确定线程的调度顺序。<br>
-Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIORITY ） - 10 （Thread.MAX_PRIORITY ）。<br>
-默认情况下，每一个线程都会分配一个优先级 NORM_PRIORITY（5）。<br>
-具有较高优先级的线程对程序更重要，并且应该在低优先级的线程之前分配处理器资源。但是，线程优先级不能保证线程执行的顺序，而且非常依赖于平台。</p>
-<p>#四、Java 提供了三种创建线程的方法：<br>
-通过实现 Runnable 接口；<br>
-通过继承 Thread 类本身；<br>
-通过 Callable 和 Future 创建线程。</p>
+				<p>registerNatives()   //私有方法<br>
+getClass()    //返回此 Object 的运行类。<br>
+hashCode()    //用于获取对象的哈希值。<br>
+equals(Object obj)     //用于确认两个对象是否“相同”。<br>
+clone()    //创建并返回此对象的一个副本。<br>
+toString()   //返回该对象的字符串表示。<br>
+notify()    //唤醒在此对象监视器上等待的单个线程。<br>
+notifyAll()     //唤醒在此对象监视器上等待的所有线程。<br>
+wait(long timeout)    //在其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或        者超过指定的时间量前，导致当前线程等待。<br>
+wait(long timeout, int nanos)    //在其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量前，导致当前线程等待。<br>
+wait()    //用于让当前线程失去操作权限，当前线程进入等待序列<br>
+finalize()    //当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
@@ -225,10 +180,10 @@ Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIO
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/chang-yong-de-san-chong-she-ji-mo-shi-singletontemplatestrategy-mo-shi/" rel="prev"> 常用的三种设计模式：Singleton、Template、Strategy模式</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/synchronized-yu-volatile/" rel="prev"> synchronized与volatile</a></div>
 		 
 		 
-		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/" rel="next"> 关于Java中的集合</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/sleepwaityieldjoin/" rel="next"> sleep、wait、yield、join</a></div>
 		
 		</div>
 	</nav>
