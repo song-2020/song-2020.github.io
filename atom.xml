@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>http://localhost:4000</id>
+    <id>https://song-2020.Github.io</id>
     <title>彩虹桥</title>
-    <updated>2020-07-05T07:27:33.225Z</updated>
+    <updated>2020-07-05T09:18:30.660Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="http://localhost:4000"/>
-    <link rel="self" href="http://localhost:4000/atom.xml"/>
+    <link rel="alternate" href="https://song-2020.Github.io"/>
+    <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
     <subtitle>个人技术博客</subtitle>
-    <logo>http://localhost:4000/images/avatar.png</logo>
-    <icon>http://localhost:4000/favicon.ico</icon>
+    <logo>https://song-2020.Github.io/images/avatar.png</logo>
+    <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 彩虹桥</rights>
     <entry>
         <title type="html"><![CDATA[Java多线程编程]]></title>
-        <id>http://localhost:4000/post/java-duo-xian-cheng-bian-cheng/</id>
-        <link href="http://localhost:4000/post/java-duo-xian-cheng-bian-cheng/">
+        <id>https://song-2020.Github.io/post/java-duo-xian-cheng-bian-cheng/</id>
+        <link href="https://song-2020.Github.io/post/java-duo-xian-cheng-bian-cheng/">
         </link>
         <updated>2020-05-15T13:27:03.000Z</updated>
         <content type="html"><![CDATA[<p>#一、定义<br>
@@ -50,7 +50,7 @@ Java 给多线程编程提供了内置的支持。<br>
 <p>#二、一个线程的生命周期<br>
 线程是一个动态执行的过程，它也有一个从产生到死亡的过程。<br>
 下图显示了一个线程完整的生命周期。<br>
-<img src="http://localhost:4000/post-images/1593696513463.png" alt="" loading="lazy"><br>
+<img src="https://song-2020.Github.io/post-images/1593696513463.png" alt="" loading="lazy"><br>
 新建状态:<br>
 使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。<br>
 就绪状态:<br>
@@ -77,21 +77,21 @@ Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIO
     </entry>
     <entry>
         <title type="html"><![CDATA[关于Java中的集合]]></title>
-        <id>http://localhost:4000/post/guan-yu-java-zhong-de-ji-he/</id>
-        <link href="http://localhost:4000/post/guan-yu-java-zhong-de-ji-he/">
+        <id>https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/</id>
+        <link href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
         </link>
         <updated>2020-05-07T12:13:02.000Z</updated>
         <content type="html"><![CDATA[<h1 id="一-概述">一、概述</h1>
-<figure data-type="image" tabindex="1"><img src="http://localhost:4000/post-images/1593692066544.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="1"><img src="https://song-2020.Github.io/post-images/1593692066544.png" alt="" loading="lazy"></figure>
 <h1 id="二-java集合框架图">二、Java集合框架图</h1>
-<p><img src="http://localhost:4000/post-images/1593692291195.png" alt="" loading="lazy"><br>
+<p><img src="https://song-2020.Github.io/post-images/1593692291195.png" alt="" loading="lazy"><br>
 集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：<br>
 接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象<br>
 实现（类）：是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。<br>
 算法：是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。<br>
 除了集合，该框架也定义了几个 Map 接口和类。Map 里存储的是键/值对。尽管 Map 不是集合，但是它们完全整合在集合中。</p>
 <h1 id="三-集合框架体系">三、集合框架体系</h1>
-<figure data-type="image" tabindex="2"><img src="http://localhost:4000/post-images/1593692402821.png" alt="" loading="lazy"></figure>
+<figure data-type="image" tabindex="2"><img src="https://song-2020.Github.io/post-images/1593692402821.png" alt="" loading="lazy"></figure>
 <h1 id="四-关于线程安全">四、关于线程安全</h1>
 <h2 id="1-线程安全thread-safe的集合对象">1、线程安全(Thread-safe)的集合对象：</h2>
 <p>Vector 、HashTable 、StringBuffer 、stackenumeration</p>
@@ -135,24 +135,24 @@ TreeSet<br>
     </entry>
     <entry>
         <title type="html"><![CDATA[Java常用基础知识]]></title>
-        <id>http://localhost:4000/post/java-chang-yong-ji-chu-zhi-shi/</id>
-        <link href="http://localhost:4000/post/java-chang-yong-ji-chu-zhi-shi/">
+        <id>https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/</id>
+        <link href="https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/">
         </link>
         <updated>2020-04-20T12:06:05.000Z</updated>
         <content type="html"><![CDATA[<p>#java关键字<br>
-<img src="http://localhost:4000/post-images/1593691681351.png" alt="" loading="lazy"><br>
+<img src="https://song-2020.Github.io/post-images/1593691681351.png" alt="" loading="lazy"><br>
 #Java三大特性<br>
 封装主要是隐藏内部代码；<br>
 继承主要是复用现有代码；<br>
 多态主要是改写对象行为。<br>
 #各种变量的默认值及默认值<br>
-<img src="http://localhost:4000/post-images/1593691916709.png" alt="" loading="lazy"></p>
+<img src="https://song-2020.Github.io/post-images/1593691916709.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Spring boot技术相关]]></title>
-        <id>http://localhost:4000/post/spring-boot-ji-zhu-xiang-guan/</id>
-        <link href="http://localhost:4000/post/spring-boot-ji-zhu-xiang-guan/">
+        <id>https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/</id>
+        <link href="https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/">
         </link>
         <updated>2020-04-02T06:39:07.000Z</updated>
         <content type="html"><![CDATA[<p>#一、什么是 Spring Boot<br>
