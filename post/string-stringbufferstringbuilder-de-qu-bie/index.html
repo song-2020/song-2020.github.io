@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>常用的三种设计模式：Singleton、Template、Strategy模式 | 彩虹桥</title>	
+<title>String, StringBuffer,StringBuilder的区别 | 彩虹桥</title>	
 
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <script type="text/javascript">
@@ -148,10 +148,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">常用的三种设计模式：Singleton、Template、Strategy模式</h1>
+			<h1 class="wow swing entry-title">String, StringBuffer,StringBuilder的区别</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-06-15 23:30:13" itemprop="datePublished" pubdate="">2020-06-15</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-05-28 23:37:39" itemprop="datePublished" pubdate="">2020-05-28</time></i>
 	          </div>
 			
 </span>
@@ -159,39 +159,35 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<h1 id="一-singleton单例模式">一、Singleton单例模式</h1>
-<p>单例指的只能存在唯一的一个实例对象(单例)<br>
-单例模式的设计思路：先阻止类可以类外部通过new的方式(构造函数)创建实例，并在类的内部创建一个获得该类实例的静态方法，用来创建该类实例（不存在实例时）或者返回实例（存在实例时）从而实现单一实例的控制。<br>
-Singleton模式首先先对其构造方法的权限声明为private，阻止类外部通过构造方法创建实例，并采用static来共享对象实例，再提供get方法来获取唯一实例。但是要特别注意的是，在懒汉式例程中get方法内部采用了synchronized锁声明（只允许一个线程进入）。<br>
-如果没有声明的情况下，如下：</p>
-<p>public static LazyMan getlazyman()<br>
-{<br>
-if(lazyman== null)<br>
-{ lazyman = new LazyMan(); }<br>
-return lazyman;<br>
-}</p>
-<pre><code>在多线程下单例模式 使用是非常危险的（不安全的），有可能出现这种情况，唯一实例并未创建时，多个线程都调用类内部创建类的方法，而且都运行到if(lazyman == null)内部而且在运行lazyman = newLazyMan();之前的地方，这就非常尴尬了，这个时候lazyman=null，if里的条件语句是true，所以可以进入到if内部，也就多个线程都通过了我们原本为了限制实例数量的判断语句，而且下一步都是lazyman= new LazyMan();，这样在堆中就存在多个LazyMan实例了，这就和我们预期遐想的不同了。
-</code></pre>
-<p>Java中四种线程安全的单例模式实现方式：<br>
-第一种：饿汉模式（线程安全）<br>
-第二种：懒汉模式 （如果方法没有synchronized，则线程不安全）<br>
-第三种：懒汉模式改良版（线程安全，使用了double-check，即check-加锁-check，目的是为了减少同步的开销）<br>
-第四种：利用私有的内部工厂类（线程安全，内部类也可以换成内部接口，不过工厂类变量的作用于要改为public了。）</p>
-<h1 id="二-template模式模板模式">二、Template模式（模板模式）</h1>
-<pre><code>    模板模式，顾名思义，设定了模板，并让接下来代码实现都按照一个模板进行，说到模板，很容易就联想到了抽象类和接口的运用，定义了方法名，没有方法体，然后让子类去实现、继承、扩展他们的方法，那么，抽象类和接口的方法不妨就充当了“模板”的作用，也就是骨架，这就是模板模式。
-    在模板模式中，可分为抽象模板(AbstractTemplate)和具体模板(Concrete Template)
-    抽象模板也就是骨架，定义一个或多个操作(方法)，以便被子类实现。
-    具体模板指的就是对抽象模板的实现，也可以说就是子类。在
-    抽象模板中的基础方法又可以分为：抽象方法(AbstractMethod)、具体方法(Concrete Method)、钩子方法(Hook Method)
-    抽象方法对应抽象类中的抽象方法，具体方法对应抽象类中具体方法，钩子方法对应抽象类（接口）中的空方法。
-    例程：//定义了一个抽象类，名字为SteamRice（煮饭、蒸饭），方法分别为PutRice(下米)、WashRice(洗米)、CookRice(煮米)
-</code></pre>
-<p>//这个类说明了煮饭的基本过程，是煮饭的骨架，什么饭都是这个步骤。<br>
-//而它的子类就对其进行了不同的实现，但是骨架还是不变的。</p>
-<h1 id="三-strategy策略模式">三、Strategy策略模式</h1>
-<pre><code>    在模板设计模式中，我们是通过抽象类（或者实现接口）制作模板，通过继承抽象类（或者实现接口）来实现模板，是一种重心放在子类上的逻辑。而策略模式其逻辑是反过来的，是一种重心放在父类上的逻辑，主要是通过父类对象对子类改写的方法进行调用。    
-    在策略模式中，可以通过策略(Strategy)一词来理解这个模式的逻辑，在逻辑上将策略的作用（目的）和策略的具体实施计划分开，父类被称为抽象策略(Strategy)，也就是相当策略的作用（目的），只提供一个骨架，而其子类被称为具体策略(ConcreteStrategy)，也就是相当策略的具体实施计划，每个子类都是一个计划。当然，既然是策略，那么就有策略的使用者，这个使用者在策略模式中称为Context（上下文、环境），正如上面所说的，在Context中创建一个Strategy的对象引用去调用ConcreteStrategy的具体实现。    
-    所以，策略模式是相当于对一系列解决方案（或算法等）包装到一系列的策略类里面去，然后通过父类对象去访问具体实现策略的子类，而提供多种解决方案，因为这些方案都是解决相同的问题，所以这些方案都可以互换，都不会影响使用方案的客户端。</code></pre>
+				<p>java中String、StringBuffer、StringBuilder是编程中经常使用的字符串类，他们之间的区别也是经常在面试中会问到的问题。现在总结一下，看看他们的不同与相同。<br>
+#1.可变与不可变<br>
+String类中使用字符数组保存字符串，如下就是，因为有“final”修饰符，所以可以知道string对象是不可变的。<br>
+private final char value[];<br>
+String 为不可变对象,一旦被创建,就不能修改它的值. . 对于已经存在的String对象的修改都是重新创建一个新的对象,然后把新的值保存进去.<br>
+StringBuilder与StringBuffer都继承自AbstractStringBuilder类，在AbstractStringBuilder中也是使用字符数组保存字符串，如下就是，可知这两种对象都是可变的。<br>
+char[] value;<br>
+StringBuffer:是一个可变对象,当对他进行修改的时候不会像String那样重新建立对象 , 它只能通过构造函数来建立,  如： StringBuffer sb = new StringBuffer();<br>
+不能通过赋值符号对他进行付值. ， 如 sb = &quot;welcome to here!&quot;;//error<br>
+对象被建立以后,在内存中就会分配内存空间,并初始保存一个null.向StringBuffer中赋值的时候可以通过它的append方法.      sb.append(&quot;hello&quot;);<br>
+#2.是否多线程安全<br>
+String中的对象是不可变的，也就可以理解为常量， 显然线程安全 。<br>
+AbstractStringBuilder是StringBuilder与StringBuffer的公共父类，定义了一些字符串的基本操作，如expandCapacity、append、insert、indexOf等公共方法。<br>
+StringBuffer对方法加了同步锁或者对调用的方法加了同步锁，所以是 线程安全的 。看如下源码：</p>
+<p>1   public   synchronized  StringBuffer reverse() {<br>
+2       super .reverse();<br>
+3       return   this ;<br>
+4  }<br>
+5<br>
+6   public   int  indexOf(String str) {<br>
+7       return  indexOf(str, 0);         //存在 public synchronized int                 indexOf(String str, int fromIndex) 方法<br>
+8  }</p>
+<p>StringBuilder并没有对方法进行加同步锁，所以是 非线程安全的 。<br>
+#3.StringBuilder与StringBuffer共同点<br>
+StringBuilder与StringBuffer有公共父类AbstractStringBuilder( 抽象类 )。<br>
+抽象类与接口的其中一个区别是：抽象类中可以定义一些子类的公共方法，子类只需要增加新的功能，不需要重复写已经存在的方法；而接口中只是对方法的申明和常量的定义。<br>
+StringBuilder、StringBuffer的方法都会调用AbstractStringBuilder中的公共方法，如super.append(...)。只是StringBuffer会在方法上加synchronized关键字，进行同步。<br>
+最后，如果程序不是多线程的，那么使用StringBuilder效率高于StringBuffer。</p>
+<p>效率比较String &lt; StringBuffer &lt; StringBuilder，但是在String S1 =“This is only a”+“simple”+“test”时，String效率最高。</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
@@ -201,10 +197,10 @@ return lazyman;<br>
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/sleepwaityieldjoin/" rel="prev"> sleep、wait、yield、join</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/" rel="prev"> 针对循环优化进行的方法</a></div>
 		 
 		 
-		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/" rel="next"> 针对循环优化进行的方法</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/java-duo-xian-cheng-bian-cheng/" rel="next"> Java多线程编程</a></div>
 		
 		</div>
 	</nav>

@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>彩虹桥</title>
-    <updated>2020-07-05T15:35:12.900Z</updated>
+    <updated>2020-07-05T15:40:12.389Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -193,6 +193,52 @@ return lazyman;<br>
 <pre><code>    在模板设计模式中，我们是通过抽象类（或者实现接口）制作模板，通过继承抽象类（或者实现接口）来实现模板，是一种重心放在子类上的逻辑。而策略模式其逻辑是反过来的，是一种重心放在父类上的逻辑，主要是通过父类对象对子类改写的方法进行调用。    
     在策略模式中，可以通过策略(Strategy)一词来理解这个模式的逻辑，在逻辑上将策略的作用（目的）和策略的具体实施计划分开，父类被称为抽象策略(Strategy)，也就是相当策略的作用（目的），只提供一个骨架，而其子类被称为具体策略(ConcreteStrategy)，也就是相当策略的具体实施计划，每个子类都是一个计划。当然，既然是策略，那么就有策略的使用者，这个使用者在策略模式中称为Context（上下文、环境），正如上面所说的，在Context中创建一个Strategy的对象引用去调用ConcreteStrategy的具体实现。    
     所以，策略模式是相当于对一系列解决方案（或算法等）包装到一系列的策略类里面去，然后通过父类对象去访问具体实现策略的子类，而提供多种解决方案，因为这些方案都是解决相同的问题，所以这些方案都可以互换，都不会影响使用方案的客户端。</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[针对循环优化进行的方法]]></title>
+        <id>https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/</id>
+        <link href="https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/">
+        </link>
+        <updated>2020-06-01T15:39:33.000Z</updated>
+        <content type="html"><![CDATA[<p>#死代码删除，代码外提，强度削弱，删除归纳变量，复写传播</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[String, StringBuffer,StringBuilder的区别]]></title>
+        <id>https://song-2020.Github.io/post/string-stringbufferstringbuilder-de-qu-bie/</id>
+        <link href="https://song-2020.Github.io/post/string-stringbufferstringbuilder-de-qu-bie/">
+        </link>
+        <updated>2020-05-28T15:37:39.000Z</updated>
+        <content type="html"><![CDATA[<p>java中String、StringBuffer、StringBuilder是编程中经常使用的字符串类，他们之间的区别也是经常在面试中会问到的问题。现在总结一下，看看他们的不同与相同。<br>
+#1.可变与不可变<br>
+String类中使用字符数组保存字符串，如下就是，因为有“final”修饰符，所以可以知道string对象是不可变的。<br>
+private final char value[];<br>
+String 为不可变对象,一旦被创建,就不能修改它的值. . 对于已经存在的String对象的修改都是重新创建一个新的对象,然后把新的值保存进去.<br>
+StringBuilder与StringBuffer都继承自AbstractStringBuilder类，在AbstractStringBuilder中也是使用字符数组保存字符串，如下就是，可知这两种对象都是可变的。<br>
+char[] value;<br>
+StringBuffer:是一个可变对象,当对他进行修改的时候不会像String那样重新建立对象 , 它只能通过构造函数来建立,  如： StringBuffer sb = new StringBuffer();<br>
+不能通过赋值符号对他进行付值. ， 如 sb = &quot;welcome to here!&quot;;//error<br>
+对象被建立以后,在内存中就会分配内存空间,并初始保存一个null.向StringBuffer中赋值的时候可以通过它的append方法.      sb.append(&quot;hello&quot;);<br>
+#2.是否多线程安全<br>
+String中的对象是不可变的，也就可以理解为常量， 显然线程安全 。<br>
+AbstractStringBuilder是StringBuilder与StringBuffer的公共父类，定义了一些字符串的基本操作，如expandCapacity、append、insert、indexOf等公共方法。<br>
+StringBuffer对方法加了同步锁或者对调用的方法加了同步锁，所以是 线程安全的 。看如下源码：</p>
+<p>1   public   synchronized  StringBuffer reverse() {<br>
+2       super .reverse();<br>
+3       return   this ;<br>
+4  }<br>
+5<br>
+6   public   int  indexOf(String str) {<br>
+7       return  indexOf(str, 0);         //存在 public synchronized int                 indexOf(String str, int fromIndex) 方法<br>
+8  }</p>
+<p>StringBuilder并没有对方法进行加同步锁，所以是 非线程安全的 。<br>
+#3.StringBuilder与StringBuffer共同点<br>
+StringBuilder与StringBuffer有公共父类AbstractStringBuilder( 抽象类 )。<br>
+抽象类与接口的其中一个区别是：抽象类中可以定义一些子类的公共方法，子类只需要增加新的功能，不需要重复写已经存在的方法；而接口中只是对方法的申明和常量的定义。<br>
+StringBuilder、StringBuffer的方法都会调用AbstractStringBuilder中的公共方法，如super.append(...)。只是StringBuffer会在方法上加synchronized关键字，进行同步。<br>
+最后，如果程序不是多线程的，那么使用StringBuilder效率高于StringBuffer。</p>
+<p>效率比较String &lt; StringBuffer &lt; StringBuilder，但是在String S1 =“This is only a”+“simple”+“test”时，String效率最高。</p>
 ]]></content>
     </entry>
     <entry>
