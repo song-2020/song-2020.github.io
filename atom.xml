@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>脚踏实地，仰望星空</title>
-    <updated>2020-07-06T01:11:37.741Z</updated>
+    <updated>2020-07-06T01:53:51.676Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,136 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
+    <entry>
+        <title type="html"><![CDATA[Java中的事务及使用]]></title>
+        <id>https://song-2020.Github.io/post/java-zhong-de-shi-wu-ji-shi-yong/</id>
+        <link href="https://song-2020.Github.io/post/java-zhong-de-shi-wu-ji-shi-yong/">
+        </link>
+        <updated>2020-07-06T01:39:37.000Z</updated>
+        <summary type="html"><![CDATA[<p>https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
+<!-- more -->
+<p>什么是事务？</p>
+<p>事务（Transaction），一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。</p>
+<p>为什么要事务？</p>
+<p>事务是为解决数据安全操作提出的，事务控制实际上就是控制数据的安全访问。</p>
+<p>用一个简单例子说明：银行转帐业务，账户A要将自己账户上的1000元转到B账户下面，A账户余额首先要减去1000元，然后B账户要增加1000元。假如在中间网络出现了问题，A账户减去1000元已经结束，B因为网络中断而操作失败，那么整个业务失败，必须做出控制，要求A账户转帐业务撤销。这才能保证业务的正确性，完成这个操走就需要事务，将A账户资金减少和B账户资金增加放到同一个事务里，要么全部执行成功，要么全部撤销，这样就保证了数据的安全性。</p>
+<p>事务的4个特性（ACID）：</p>
+<ol>
+<li>
+<p>原子性（atomicity）：事务是数据库的逻辑工作单位，而且是必须是原子工作单位，对于其数据修改，要么全部执行，要么全部不执行。</p>
+</li>
+<li>
+<p>一致性（consistency）：事务在完成时，必须是所有的数据都保持一致状态。在相关数据库中，所有规则都必须应用于事务的修改，以保持所有数据的完整性。（实例：转账，两个账户余额相加，值不变。）</p>
+</li>
+<li>
+<p>隔离性（isolation）：一个事务的执行不能被其他事务所影响。</p>
+</li>
+<li>
+<p>持久性（durability）：一个事务一旦提交，事物的操作便永久性的保存在DB中。即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。</p>
+</li>
+</ol>
+<p>Java有几种类型的事务？</p>
+<p>Java事务的类型有三种：JDBC事务、JTA（Java Transaction API）事务、容器事务。<br>
+————————————————<br>
+版权声明：本文为CSDN博主「share_happy_life」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Java面试题相关]]></title>
+        <id>https://song-2020.Github.io/post/java-mian-shi-ti-xiang-guan/</id>
+        <link href="https://song-2020.Github.io/post/java-mian-shi-ti-xiang-guan/">
+        </link>
+        <updated>2020-07-06T01:15:01.000Z</updated>
+        <content type="html"><![CDATA[<p>1、都用过哪些技术和框架？<br>
+2、在项目中主要干一块，用了哪些技术？<br>
+3、设计模式了解吗，都会哪些设计模式？<br>
+单例模式，模板模式，策略模式<br>
+4、在项目中常用到哪几个？<br>
+5、说一下工厂模式，都有哪几种，有什么区别。<br>
+简单工厂：可以造很多种汽车品牌的车子，<br>
+工厂：只关心结果，隐藏复杂的过程，<br>
+方法：约束<br>
+抽象：简单工厂和方法工厂的结合<br>
+6、用过PpringCloud吗？说一下有哪些组件。<br>
+7、JVM调优会吗，都调过什么参数？<br>
+8、数据库用的多吗，平常都怎么用的？<br>
+9、Java的事务有几种说一下？<br>
+JDBC事务、JTA（Java Transaction API java事务接口）事务、容器事务。<br>
+10、数据库的事务呢？<br>
+11、脏读、幻读、不可重复读说一下。<br>
+脏读指一个事务读取了另外一个事务未提交的数据。<br>
+不可重复读指在一个事务内读取表中的某一行数据，多次读取结果不同。<br>
+不可重复读和脏读的区别是，脏读是读取前一事务未提交的脏数据，不可重复读是重新读取了前一事务已提交的数据。<br>
+虚读(幻读)是指在一个事务内读取到了别的事务插入的数据，导致前后读取不一致。<br>
+12、平常在项目中事务怎么处理的，我们这边数据库操作比较多。<br>
+spring boot AOP<br>
+好的，今天面试到此结束，待会叫HR将反馈信息告知你。</p>
+<p>老说我的面经简单，来一个正常的了！！！！<br>
+--------------背景--------------<br>
+创业型公司，有自研的校园社区类复合型APP。现场面试，先笔试题，然后再面试问了一些，共一轮复合型面试。<br>
+能不能建议各互联网公司给一台没有网络的电脑笔试，天天摸电脑不怎么写字手都要断了，而且问题太宽泛空地不够写啊，写得慢没写完还没嫌弃了。<br>
+--------------过程---------------<br>
+本次就一轮笔试+面试，先做题，然后自我介绍，再就问了几个问题。<br>
+--------------笔试题---------------<br>
+一、String、StringBuilder、StringBuffer它们之间的区别，他们有哪些常用操作方法？<br>
+二、Spring有哪些特性，以及他们的原理是什么？SpringMvc工作流程大概描述一下。<br>
+三、Mybatis框架运行原理大概描述一下。<br>
+四、Java集合类有哪些，描述下他们的区别。<br>
+五、线程池的运行原理描述一下。<br>
+六、MySql的运行原理，MySql中两种引擎有什么区别。<br>
+七、索引是什么，有什么作用？描述下它的原理。<br>
+八、查询中的左连接、右连接、内连接<br>
+九、乐观锁和悲观锁<br>
+十、事务有几大特性，说出它们代表的意思，并描述一下并发事务隔离级别。<br>
+十一、GC是什么，GC算法都有什么？<br>
+十二、说说什么是缓存，应用场景和注意事项<br>
+十三、MQ是什么，应用场景和注意事项<br>
+--------笔试实操题---------<br>
+十四、使用ArrayList来实现一个排序。仅能使用一个ArrayList，一个courseList，course记录了分数score、课程name，实现一个对courseList以分数高低排序的方法。<br>
+十五、统计。若假设course表有课程分数字段course，有1、2分的课程，如何使用一句sql语句进行统计有多少门1分课程和2分课程（面试官建议使用group by）。<br>
+十六、设计数据库。设计一套权限数据库，用户可以有多个角色，可以对角色进行授权，设计完毕使用一条sql语句，把指定id的用户的权限集查出来。<br>
+十七、代码质量保证。如何做好单元测试、集成测试？如何保证交付代码的质量，描述一下你的方式方法。<br>
+------------------面试题-----------------<br>
+一、先介绍一下你自己。<br>
+二、说一下你在项目主要负责的模块，最近一次你自己开发模块的整体流程。<br>
+三、描述下项目中整个开发流程的参与程度，需求设计参与了吗，怎么参与的，后期开发呢。<br>
+四、拿到需求后如何去开发、如何搭建，需要项目经理配合吗，怎么配合？编码过程代码质量由自己全权掌控吗？<br>
+五、说说索引吧，还有原理。<br>
+六、数据库中乐观锁、悲观锁用操作具体怎么实现的?<br>
+七、前端会吗，需要自己开发页面吗，会到什么程度？<br>
+八、高并发经验有吗，死锁怎么定位？<br>
+九、有什么想要问的？<br>
+十、你学习成绩怎么样？<br>
+答：中上等，不算顶尖。（内心OS：？？？？，这不是应届才问？我都毕业好多年了）</p>
+<p>--------------背景--------------<br>
+金融类公司。在线面试，就突然收到笔试邮件，两天内登陆，限时150分钟，有4道算法题，一些单选题，多选题、填空题、简答题，共计50个。需要开启摄像头，不许切出全屏答题页面。<br>
+--------------过程---------------<br>
+不知道有几次，我猜测笔试过了应该再面试；HR也没联系我就直接发了一个笔试邮件，先做了再说，不然今天就超时了。简历投的太多也不知道具体是哪一家公司了。题也比较多，做完只能记住一些大概了。<br>
+--------------笔试题---------------<br>
+单/多选题忘了题目了共计20+道，大概范围是java基础、spring（原理以及一些注解）、mybatis、mysql、事务；docker有两道。<br>
+填空题，10题左右，例如：<br>
+1.Java定义整形变量的关键字，四个空<br>
+2、mybatis有哪两种事务机制<br>
+3、只有满足条件的记录才会包含在查询记录中，是什么连接？<br>
+4、JPA的Entity自定义主键测试使用哪个注解？<br>
+5、Docker，指定容器名称、ip，端口，映射本地主机端口的操作命令怎么写。<br>
+简答题：<br>
+1、Spring中IOC、AOP是什么意思，它们的原理是什么<br>
+2、Spring中bean的生存周期<br>
+3、使用（A,B,C）组合索引作为组合索引，（C）能生效吗，怎样的查询能生效。<br>
+4、Java内存分配策略<br>
+5、比较栈和队列<br>
+6、hashmap的原理<br>
+算法题4道：<br>
+1）找出两个链表共同的元素头，有则返回当前节点值，没有返回null，比如1-2-3 ； 2-7；那么即为2。<br>
+2）给定数组int[],求出其中的最大值。<br>
+3）求出1-n中的质数<br>
+4）输入一串字符串例如abc，输出其中字符可能的字符串，例如abc、acb、bac、bca、cab、cba。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java练习题]]></title>
         <id>https://song-2020.Github.io/post/java-lian-xi-ti/</id>
@@ -769,6 +899,87 @@ finalize()    //当垃圾回收器确定不存在对该对象的更多引用时�
 ]]></content>
     </entry>
     <entry>
+        <title type="html"><![CDATA[Spring boot技术相关]]></title>
+        <id>https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/</id>
+        <link href="https://song-2020.Github.io/post/spring-boot-ji-zhu-xiang-guan/">
+        </link>
+        <updated>2020-06-21T06:39:07.000Z</updated>
+        <content type="html"><![CDATA[<p>#一、什么是 Spring Boot<br>
+Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
+化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
+务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
+框架的另一种表现形式。<br>
+Spring的三大核心IOC(控制反转)和DI(依赖注入)和AOP（面向切面编程），控制反转是将原先在代码中创建对象的工作交由spring容器管理。依赖注入采用动态代理的方式进行注入，注入方式可以通过构造函数、set方法、@Autowired注解注入。Spring的IOC和DI都是为了解除代码之间的耦合度，便于日后的项目扩展。举个栗子：在未使用spring之前，创建对象是通过在代码中通过new进行实例化的，假设我这里有一个Demo类，Demo类中有一个方法叫做getInfo() ,A、B、C、D类都有调用Demo类中的getInfo()，有一天公司小王不小心把Demo类中的getInfo()方法改动了，结果导致所有调用Demo类的getInfo()的类都报错了，直接项目项目跑不起来,通过上面可想而知为什么我们需要解除程序耦合，而spring的Spring IOC和DI就是为了解决这个问题的。另外就是对象生命周期的问题，以往大量创建的实例对象是在代码进行，如果对象资源不及时释放销毁很容易出现内存溢出异常。</p>
+<p>#二、 Spring Boot 特征<br>
+1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
+2、在Spring Boot中直接嵌入了Tomcat、<br>
+Jetty、Undertow等Web容器，所以在使用SpringBoot<br>
+做 Web 开发时不需要部署 WAR 文件<br>
+3、过提供自己的启动器(Starter)依赖，简化项目构建配置<br>
+4、尽量的自动配置 Spring 和第三方库<br>
+5、提供了生产就绪特征，如：度量指标，运行状况检查和外部化配置<br>
+6、绝对没有代码生成，也不需要 XML 配置文件</p>
+<p>#三、Spring Boot 的核心注解<br>
+5.1@SpringBootApplication<br>
+是 SpringBoot 的启动类。<br>
+此注解等同于@Configuration+@EnableAutoConfiguration+@ComponentScan 的组合。<br>
+5.2@SpringBootConfiguration<br>
+@SpringBootConfiguration 注解是@Configuration 注解的派生注解，跟@Configuration<br>
+注解的功能一致，标注这个类是一个配置类，只不过@SpringBootConfiguration 是 springboot<br>
+的注解，而@Configuration 是 spring 的注解<br>
+5.3@Configuration<br>
+通过对 bean 对象的操作替代 spring 中 xml 文件<br>
+5.4@EnableAutoConfiguration<br>
+Spring Boot 自动配置（auto-configuration）：尝试根据你添加的 jar 依赖自动配置你的<br>
+Spring 应用。是@AutoConfigurationPackage 和@Import(AutoConfigurationImportSelector.class)<br>
+注解的组合。<br>
+5.5@AutoConfigurationPackage<br>
+@AutoConfigurationPackage 注解，自动注入主类下所在包下所有的加了注解的类<br>
+（@Controller，@Service 等），以及配置类（@Configuration）<br>
+5.6@Import({AutoConfigurationImportSelector.class})<br>
+直接导入普通的类<br>
+导入实现了 ImportSelector 接口的类<br>
+导入实现了 ImportBeanDefinitionRegistrar 接口的类<br>
+5.7@ComponentScan<br>
+组件扫描，可自动发现和装配一些 Bean。<br>
+5.8@ConfigurationPropertiesScan<br>
+@ConfigurationPropertiesScan 扫描配置属性。@EnableConfigurationProperties 注解的作<br>
+用是使用 @ConfigurationProperties 注解的类生效。</p>
+<p>#四、Spring Boot 整合 Thymeleaf<br>
+3.1Thymeleaf 介绍<br>
+Thymeleaf 的主要目标是将优雅的自然模板带到开发工作流程中，并将 HTML 在浏览器<br>
+中正确显示，并且可以作为静态原型，让开发团队能更容易地协作。Thymeleaf 能够处理<br>
+HTML，XML，JavaScript，CSS 甚至纯文本。<br>
+长期以来,jsp 在视图领域有非常重要的地位,随着时间的变迁,出现了一位新的挑战<br>
+者:Thymeleaf,Thymeleaf 是原生的,不依赖于标签库.它能够在接受原始 HTML 的地方进行编<br>
+辑和渲染.因为它没有与Servelet规范耦合,因此Thymeleaf模板能进入jsp所无法涉足的领域。</p>
+<p>Spring Boot 整合mybatis框架<br>
+MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过程以及高级映射。MyBatis 避免了几乎所有的 JDBC 代码和手动设置参数以及获取结果集。MyBatis 可以使用简单的 XML 或注解来配置和映射原生信息，将接口和 Java 的 POJOs(Plain Old Java Objects,普通的 Java对象)映射成数据库中的记录。</p>
+<p>generator插件<br>
+可根据配置文件自动为mybatis项目生成mapper和pojo文件</p>
+<p>spring boot热部署<br>
+使用devtools或者jrebel工具</p>
+<p>Spring Boot 度量指标监控与健康检查<br>
+使用 Actuator 检查与监控<br>
+使用可视化监控应用 Spring Boot Admin</p>
+<p>#五、 关于Spring<br>
+Spring是一系列轻量级Java EE框架的集合<br>
+Spring中包含一个“依赖注入”模式的实现<br>
+使用Spring可以实现声明式事务</p>
+<p>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。<br>
+轻量——从大小与开销两方面而言Spring都是轻量的。完整的Spring框架可以在一个大小只有1MB多的JAR文件里发布。并且Spring所需的处理开销也是微不足道的。此外，Spring是非侵入式的：典型地，Spring应用中的对象不依赖于Spring的特定类。<br>
+控制反转——Spring通过一种称作控制反转（IoC）的技术促进了松耦合。当应用了IoC，一个对象依赖的其它对象会通过被动的方式传递进来，而不是这个对象自己创建或者查找依赖对象。你可以认为IoC与JNDI相反——不是对象从容器中查找依赖，而是容器在对象初始化时不等对象请求就主动将依赖传递给它。<br>
+面向切面——Spring提供了面向切面编程的丰富支持，允许通过分离应用的业务逻辑与系统级服务（例如审计（auditing）和事务（transaction）管理）进行内聚性的开发。应用对象只实现它们应该做的——完成业务逻辑——仅此而已。它们并不负责（甚至是意识）其它的系统级关注点，例如日志或事务支持。<br>
+容器——Spring包含并管理应用对象的配置和生命周期，在这个意义上它是一种容器，你可以配置你的每个bean如何被创建——基于一个可配置原型（prototype），你的bean可以创建一个单独的实例或者每次需要时都生成一个新的实例——以及它们是如何相互关联的。然而，Spring不应该被混同于传统的重量级的EJB容器，它们经常是庞大与笨重的，难以使用。<br>
+框架——Spring可以将简单的组件配置、组合成为复杂的应用。在Spring中，应用对象被声明式地组合，典型地是在一个XML文件里。Spring也提供了很多基础功能（事务管理、持久化框架集成等等），将应用逻辑的开发留给了你。</p>
+<p>spring没有提供AOP方式的日志系统。<br>
+AOP为Aspect Oriented Programming的缩写，意为：面向切面编程，通过预编译方式和运行期动态***实现程序功能的统一维护的一种技术。AOP是OOP的延续，是软件开发中的一个热点，也是Spring框架中的一个重要内容，是函数式编程的一种衍生范型。<br>
+Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系统。</p>
+<p>spring由哪些框架组成？<br>
+spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core context</p>
+]]></content>
+    </entry>
+    <entry>
         <title type="html"><![CDATA[sleep、wait、yield、join]]></title>
         <id>https://song-2020.Github.io/post/sleepwaityieldjoin/</id>
         <link href="https://song-2020.Github.io/post/sleepwaityieldjoin/">
@@ -889,145 +1100,6 @@ StringBuilder与StringBuffer有公共父类AbstractStringBuilder( 抽象类 )。
 StringBuilder、StringBuffer的方法都会调用AbstractStringBuilder中的公共方法，如super.append(...)。只是StringBuffer会在方法上加synchronized关键字，进行同步。<br>
 最后，如果程序不是多线程的，那么使用StringBuilder效率高于StringBuffer。</p>
 <p>效率比较String &lt; StringBuffer &lt; StringBuilder，但是在String S1 =“This is only a”+“simple”+“test”时，String效率最高。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Java多线程编程]]></title>
-        <id>https://song-2020.Github.io/post/java-duo-xian-cheng-bian-cheng/</id>
-        <link href="https://song-2020.Github.io/post/java-duo-xian-cheng-bian-cheng/">
-        </link>
-        <updated>2020-05-15T13:27:03.000Z</updated>
-        <content type="html"><![CDATA[<p>#一、定义<br>
-Java 给多线程编程提供了内置的支持。<br>
-一条线程指的是进程中一个单一顺序的控制流，一个进程中可以并发多个线程，每条线程并行执行不同的任务。<br>
-多线程是多任务的一种特别的形式，但多线程使用了更小的资源开销。<br>
-这里定义和线程相关的另一个术语 - 进程：一个进程包括由操作系统分配的内存空间，包含一个或多个线程。<br>
-一个线程不能独立的存在，它必须是进程的一部分。<br>
-一个进程一直运行，直到所有的非守护线程都结束运行后才能结束。<br>
-多线程能满足程序员编写高效率的程序来达到充分利用 CPU 的目的。</p>
-<p>多进程：<br>
-• 当前的操作系统都是多任务OS<br>
-• 每个独立执行的任务就是一个进程<br>
-• OS将时间划分为多个时间片（时间很短）<br>
-• 每个时间片内将CPU分配给某一个任务，时间片结束， CPU将自动回收，再分配给另外任务。从外部看，所有任 务是同时在执行。但是在CPU上，任务是按照串行依次运 行（单核CPU）。如果是多核，多个进程任务可以并行。 但是单个核上，多进程只能串行执行。<br>
-• 多进程的优点<br>
-–可以同时运行多个任务<br>
-–程序因IO堵塞时，可以释放CPU，让CPU为其他程序服务<br>
-–当系统有多个CPU时，可以为多个程序同时服务<br>
-• 我们的CPU不再提高频率，而是提高核数<br>
-• 多核和并行程序才是提高程序性能的唯一办法<br>
-• 多进程的缺点<br>
-–太笨重，不好管理<br>
-–太笨重，不好切换</p>
-<p>多线程：<br>
-• 一个程序可以包括多个子任务，可串/并行<br>
-• 每个子任务可以称为一个线程<br>
-• 如果一个子任务阻塞，程序可以将CPU调度另外一个子任 务进行工作。这样CPU还是保留在本程序中，而不是被调 度到别的程序(进程)去。这样，提高本程序所获得CPU时间 和利用率。</p>
-<p>多进程和多线程对比<br>
-–线程共享数据<br>
-–线程通讯更高效<br>
-–线程更轻量级，更容易切换<br>
-–多个线程更容易管理</p>
-<p>#二、一个线程的生命周期<br>
-线程是一个动态执行的过程，它也有一个从产生到死亡的过程。<br>
-下图显示了一个线程完整的生命周期。<br>
-<img src="https://song-2020.Github.io/post-images/1593696513463.png" alt="" loading="lazy"><br>
-新建状态:<br>
-使用 new 关键字和 Thread 类或其子类建立一个线程对象后，该线程对象就处于新建状态。它保持这个状态直到程序 start() 这个线程。<br>
-就绪状态:<br>
-当线程对象调用了start()方法之后，该线程就进入就绪状态。就绪状态的线程处于就绪队列中，要等待JVM里线程调度器的调度。<br>
-运行状态:<br>
-如果就绪状态的线程获取 CPU 资源，就可以执行 run()，此时线程便处于运行状态。处于运行状态的线程最为复杂，它可以变为阻塞状态、就绪状态和死亡状态。<br>
-阻塞状态:<br>
-如果一个线程执行了sleep（睡眠）、suspend（挂起）等方法，失去所占用资源之后，该线程就从运行状态进入阻塞状态。在睡眠时间已到或获得设备资源后可以重新进入就绪状态。可以分为三种：<br>
-等待阻塞：运行状态中的线程执行 wait() 方法，使线程进入到等待阻塞状态。<br>
-同步阻塞：线程在获取 synchronized 同步锁失败(因为同步锁被其他线程占用)。<br>
-其他阻塞：通过调用线程的 sleep() 或 join() 发出了 I/O 请求时，线程就会进入到阻塞状态。当sleep() 状态超时，join() 等待线程终止或超时，或者 I/O 处理完毕，线程重新转入就绪状态。<br>
-死亡状态:<br>
-一个运行状态的线程完成任务或者其他终止条件发生时，该线程就切换到终止状态。</p>
-<p>#三、线程的优先级<br>
-每一个 Java 线程都有一个优先级，这样有助于操作系统确定线程的调度顺序。<br>
-Java 线程的优先级是一个整数，其取值范围是 1 （Thread.MIN_PRIORITY ） - 10 （Thread.MAX_PRIORITY ）。<br>
-默认情况下，每一个线程都会分配一个优先级 NORM_PRIORITY（5）。<br>
-具有较高优先级的线程对程序更重要，并且应该在低优先级的线程之前分配处理器资源。但是，线程优先级不能保证线程执行的顺序，而且非常依赖于平台。</p>
-<p>#四、Java 提供了三种创建线程的方法：<br>
-通过实现 Runnable 接口；<br>
-通过继承 Thread 类本身；<br>
-通过 Callable 和 Future 创建线程。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[关于Java中的集合]]></title>
-        <id>https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/</id>
-        <link href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/">
-        </link>
-        <updated>2020-05-07T12:13:02.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="一-概述">一、概述</h1>
-<figure data-type="image" tabindex="1"><img src="https://song-2020.Github.io/post-images/1593692066544.png" alt="" loading="lazy"></figure>
-<h1 id="二-java集合框架图">二、Java集合框架图</h1>
-<p><img src="https://song-2020.Github.io/post-images/1593692291195.png" alt="" loading="lazy"><br>
-集合框架是一个用来代表和操纵集合的统一架构。所有的集合框架都包含如下内容：<br>
-接口：是代表集合的抽象数据类型。例如 Collection、List、Set、Map 等。之所以定义多个接口，是为了以不同的方式操作集合对象<br>
-实现（类）：是集合接口的具体实现。从本质上讲，它们是可重复使用的数据结构，例如：ArrayList、LinkedList、HashSet、HashMap。<br>
-算法：是实现集合接口的对象里的方法执行的一些有用的计算，例如：搜索和排序。这些算法被称为多态，那是因为相同的方法可以在相似的接口上有着不同的实现。<br>
-除了集合，该框架也定义了几个 Map 接口和类。Map 里存储的是键/值对。尽管 Map 不是集合，但是它们完全整合在集合中。</p>
-<h1 id="三-集合框架体系">三、集合框架体系</h1>
-<figure data-type="image" tabindex="2"><img src="https://song-2020.Github.io/post-images/1593692402821.png" alt="" loading="lazy"></figure>
-<h1 id="四-关于线程安全">四、关于线程安全</h1>
-<h2 id="1-线程安全thread-safe的集合对象">1、线程安全(Thread-safe)的集合对象：</h2>
-<p>Vector 、HashTable 、StringBuffer 、stackenumeration</p>
-<h2 id="2-非线程安全的集合对象">2、非线程安全的集合对象：</h2>
-<p>ArrayList 、LinkedList、HashMap、HashSet、TreeMap、TreeSet、StringBulider</p>
-<h1 id="五-总结">五、总结:</h1>
-<h2 id="connection接口">Connection接口:</h2>
-<p>—  List 有序,可重复<br>
-ArrayList<br>
-Arraylist默认数组大小是10，扩容后的大小是扩容前的1.5倍，最大值小于Integer 的最大值减8，如果新创建的集合有带初始值，默认就是传入的大小，也就不会扩容<br>
-优点: 底层数据结构是数组，查询快，增删慢。<br>
-缺点: 线程不安全，效率高<br>
-Vector<br>
-优点: 底层数据结构是数组，查询快，增删慢。<br>
-缺点: 线程安全，效率低<br>
-LinkedList<br>
-优点: 底层数据结构是链表，查询慢，增删快。<br>
-缺点: 线程不安全，效率高</p>
-<p>—Set    无序,不可重复<br>
-TreeSet, LinkedHashSet and HashSet 在java中都是实现Set的数据结构<br>
-TreeSet, LinkedHashSet and HashSet 的区别：<br>
-TreeSet的主要功能用于排序<br>
-LinkedHashSet的主要功能用于保证FIFO即有序的集合(先进先出)<br>
-HashSet只是通用的存储数据的集合<br>
-相同点：Duplicates elements: 因为三者都实现Set interface，所以三者都不包含duplicate elements<br>
-Thread safety: 三者都不是线程安全的，如果要使用线程安全可以Collections.synchronizedSet()<br>
-不同点：Performance and Speed: HashSet插入数据最快，其次LinkHashSet，最慢的是TreeSet因为内部实现排序<br>
-Ordering: HashSet不保证有序，LinkHashSet保证FIFO即按插入顺序排序，TreeSet安装内部实现排序，也可以自定义排序规则<br>
-null:HashSet和LinkHashSet允许存在null数据，但是TreeSet中插入null数据时会报NullPointerException</p>
-<p>HashSet<br>
-底层数据结构是哈希表。(无序,唯一)<br>
-如何来保证元素唯一性?<br>
-1.依赖两个方法：hashCode()和equals()<br>
-LinkedHashSet<br>
-底层数据结构是链表和哈希表。(FIFO插入有序,唯一)<br>
-1.由链表保证元素有序<br>
-2.由哈希表保证元素唯一<br>
-TreeSet<br>
-底层数据结构是红黑树。(唯一，有序)</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Java常用基础知识]]></title>
-        <id>https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/</id>
-        <link href="https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/">
-        </link>
-        <updated>2020-04-20T12:06:05.000Z</updated>
-        <content type="html"><![CDATA[<p>#java关键字<br>
-<img src="https://song-2020.Github.io/post-images/1593691681351.png" alt="" loading="lazy"><br>
-#Java三大特性<br>
-封装主要是隐藏内部代码；<br>
-继承主要是复用现有代码；<br>
-多态主要是改写对象行为。<br>
-#各种变量的默认值及默认值<br>
-<img src="https://song-2020.Github.io/post-images/1593691916709.png" alt="" loading="lazy"></p>
 ]]></content>
     </entry>
 </feed>

@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>Java常用基础知识 | 脚踏实地，仰望星空</title>	
+<title>Java中的事务及使用 | 脚踏实地，仰望星空</title>	
 
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <script type="text/javascript">
@@ -148,10 +148,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">Java常用基础知识</h1>
+			<h1 class="wow swing entry-title">Java中的事务及使用</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-04-20 20:06:05" itemprop="datePublished" pubdate="">2020-04-20</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-07-06 09:39:37" itemprop="datePublished" pubdate="">2020-07-06</time></i>
 	          </div>
 			
 </span>
@@ -159,14 +159,33 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<p>#java关键字<br>
-<img src="https://song-2020.Github.io/post-images/1593691681351.png" alt="" loading="lazy"><br>
-#Java三大特性<br>
-封装主要是隐藏内部代码；<br>
-继承主要是复用现有代码；<br>
-多态主要是改写对象行为。<br>
-#各种变量的默认值及默认值<br>
-<img src="https://song-2020.Github.io/post-images/1593691916709.png" alt="" loading="lazy"></p>
+				<p>https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
+<!-- more -->
+<p>什么是事务？</p>
+<p>事务（Transaction），一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。</p>
+<p>为什么要事务？</p>
+<p>事务是为解决数据安全操作提出的，事务控制实际上就是控制数据的安全访问。</p>
+<p>用一个简单例子说明：银行转帐业务，账户A要将自己账户上的1000元转到B账户下面，A账户余额首先要减去1000元，然后B账户要增加1000元。假如在中间网络出现了问题，A账户减去1000元已经结束，B因为网络中断而操作失败，那么整个业务失败，必须做出控制，要求A账户转帐业务撤销。这才能保证业务的正确性，完成这个操走就需要事务，将A账户资金减少和B账户资金增加放到同一个事务里，要么全部执行成功，要么全部撤销，这样就保证了数据的安全性。</p>
+<p>事务的4个特性（ACID）：</p>
+<ol>
+<li>
+<p>原子性（atomicity）：事务是数据库的逻辑工作单位，而且是必须是原子工作单位，对于其数据修改，要么全部执行，要么全部不执行。</p>
+</li>
+<li>
+<p>一致性（consistency）：事务在完成时，必须是所有的数据都保持一致状态。在相关数据库中，所有规则都必须应用于事务的修改，以保持所有数据的完整性。（实例：转账，两个账户余额相加，值不变。）</p>
+</li>
+<li>
+<p>隔离性（isolation）：一个事务的执行不能被其他事务所影响。</p>
+</li>
+<li>
+<p>持久性（durability）：一个事务一旦提交，事物的操作便永久性的保存在DB中。即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。</p>
+</li>
+</ol>
+<p>Java有几种类型的事务？</p>
+<p>Java事务的类型有三种：JDBC事务、JTA（Java Transaction API）事务、容器事务。<br>
+————————————————<br>
+版权声明：本文为CSDN博主「share_happy_life」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
+原文链接：https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
@@ -176,9 +195,9 @@ window.onload=getCSS();
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/" rel="prev"> 关于Java中的集合</a></div>
 		 
-		 
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/java-mian-shi-ti-xiang-guan/" rel="next"> Java面试题相关</a></div>
+		
 		</div>
 	</nav>
 	<div class="wow rollIn author-info" style="visibility: visible; animation-name: rollIn;">

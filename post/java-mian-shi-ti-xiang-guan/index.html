@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>Java常用基础知识 | 脚踏实地，仰望星空</title>	
+<title>Java面试题相关 | 脚踏实地，仰望星空</title>	
 
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <script type="text/javascript">
@@ -148,10 +148,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">Java常用基础知识</h1>
+			<h1 class="wow swing entry-title">Java面试题相关</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-04-20 20:06:05" itemprop="datePublished" pubdate="">2020-04-20</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-07-06 09:15:01" itemprop="datePublished" pubdate="">2020-07-06</time></i>
 	          </div>
 			
 </span>
@@ -159,14 +159,91 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<p>#java关键字<br>
-<img src="https://song-2020.Github.io/post-images/1593691681351.png" alt="" loading="lazy"><br>
-#Java三大特性<br>
-封装主要是隐藏内部代码；<br>
-继承主要是复用现有代码；<br>
-多态主要是改写对象行为。<br>
-#各种变量的默认值及默认值<br>
-<img src="https://song-2020.Github.io/post-images/1593691916709.png" alt="" loading="lazy"></p>
+				<p>1、都用过哪些技术和框架？<br>
+2、在项目中主要干一块，用了哪些技术？<br>
+3、设计模式了解吗，都会哪些设计模式？<br>
+单例模式，模板模式，策略模式<br>
+4、在项目中常用到哪几个？<br>
+5、说一下工厂模式，都有哪几种，有什么区别。<br>
+简单工厂：可以造很多种汽车品牌的车子，<br>
+工厂：只关心结果，隐藏复杂的过程，<br>
+方法：约束<br>
+抽象：简单工厂和方法工厂的结合<br>
+6、用过PpringCloud吗？说一下有哪些组件。<br>
+7、JVM调优会吗，都调过什么参数？<br>
+8、数据库用的多吗，平常都怎么用的？<br>
+9、Java的事务有几种说一下？<br>
+JDBC事务、JTA（Java Transaction API java事务接口）事务、容器事务。<br>
+10、数据库的事务呢？<br>
+11、脏读、幻读、不可重复读说一下。<br>
+脏读指一个事务读取了另外一个事务未提交的数据。<br>
+不可重复读指在一个事务内读取表中的某一行数据，多次读取结果不同。<br>
+不可重复读和脏读的区别是，脏读是读取前一事务未提交的脏数据，不可重复读是重新读取了前一事务已提交的数据。<br>
+虚读(幻读)是指在一个事务内读取到了别的事务插入的数据，导致前后读取不一致。<br>
+12、平常在项目中事务怎么处理的，我们这边数据库操作比较多。<br>
+spring boot AOP<br>
+好的，今天面试到此结束，待会叫HR将反馈信息告知你。</p>
+<p>老说我的面经简单，来一个正常的了！！！！<br>
+--------------背景--------------<br>
+创业型公司，有自研的校园社区类复合型APP。现场面试，先笔试题，然后再面试问了一些，共一轮复合型面试。<br>
+能不能建议各互联网公司给一台没有网络的电脑笔试，天天摸电脑不怎么写字手都要断了，而且问题太宽泛空地不够写啊，写得慢没写完还没嫌弃了。<br>
+--------------过程---------------<br>
+本次就一轮笔试+面试，先做题，然后自我介绍，再就问了几个问题。<br>
+--------------笔试题---------------<br>
+一、String、StringBuilder、StringBuffer它们之间的区别，他们有哪些常用操作方法？<br>
+二、Spring有哪些特性，以及他们的原理是什么？SpringMvc工作流程大概描述一下。<br>
+三、Mybatis框架运行原理大概描述一下。<br>
+四、Java集合类有哪些，描述下他们的区别。<br>
+五、线程池的运行原理描述一下。<br>
+六、MySql的运行原理，MySql中两种引擎有什么区别。<br>
+七、索引是什么，有什么作用？描述下它的原理。<br>
+八、查询中的左连接、右连接、内连接<br>
+九、乐观锁和悲观锁<br>
+十、事务有几大特性，说出它们代表的意思，并描述一下并发事务隔离级别。<br>
+十一、GC是什么，GC算法都有什么？<br>
+十二、说说什么是缓存，应用场景和注意事项<br>
+十三、MQ是什么，应用场景和注意事项<br>
+--------笔试实操题---------<br>
+十四、使用ArrayList来实现一个排序。仅能使用一个ArrayList，一个courseList，course记录了分数score、课程name，实现一个对courseList以分数高低排序的方法。<br>
+十五、统计。若假设course表有课程分数字段course，有1、2分的课程，如何使用一句sql语句进行统计有多少门1分课程和2分课程（面试官建议使用group by）。<br>
+十六、设计数据库。设计一套权限数据库，用户可以有多个角色，可以对角色进行授权，设计完毕使用一条sql语句，把指定id的用户的权限集查出来。<br>
+十七、代码质量保证。如何做好单元测试、集成测试？如何保证交付代码的质量，描述一下你的方式方法。<br>
+------------------面试题-----------------<br>
+一、先介绍一下你自己。<br>
+二、说一下你在项目主要负责的模块，最近一次你自己开发模块的整体流程。<br>
+三、描述下项目中整个开发流程的参与程度，需求设计参与了吗，怎么参与的，后期开发呢。<br>
+四、拿到需求后如何去开发、如何搭建，需要项目经理配合吗，怎么配合？编码过程代码质量由自己全权掌控吗？<br>
+五、说说索引吧，还有原理。<br>
+六、数据库中乐观锁、悲观锁用操作具体怎么实现的?<br>
+七、前端会吗，需要自己开发页面吗，会到什么程度？<br>
+八、高并发经验有吗，死锁怎么定位？<br>
+九、有什么想要问的？<br>
+十、你学习成绩怎么样？<br>
+答：中上等，不算顶尖。（内心OS：？？？？，这不是应届才问？我都毕业好多年了）</p>
+<p>--------------背景--------------<br>
+金融类公司。在线面试，就突然收到笔试邮件，两天内登陆，限时150分钟，有4道算法题，一些单选题，多选题、填空题、简答题，共计50个。需要开启摄像头，不许切出全屏答题页面。<br>
+--------------过程---------------<br>
+不知道有几次，我猜测笔试过了应该再面试；HR也没联系我就直接发了一个笔试邮件，先做了再说，不然今天就超时了。简历投的太多也不知道具体是哪一家公司了。题也比较多，做完只能记住一些大概了。<br>
+--------------笔试题---------------<br>
+单/多选题忘了题目了共计20+道，大概范围是java基础、spring（原理以及一些注解）、mybatis、mysql、事务；docker有两道。<br>
+填空题，10题左右，例如：<br>
+1.Java定义整形变量的关键字，四个空<br>
+2、mybatis有哪两种事务机制<br>
+3、只有满足条件的记录才会包含在查询记录中，是什么连接？<br>
+4、JPA的Entity自定义主键测试使用哪个注解？<br>
+5、Docker，指定容器名称、ip，端口，映射本地主机端口的操作命令怎么写。<br>
+简答题：<br>
+1、Spring中IOC、AOP是什么意思，它们的原理是什么<br>
+2、Spring中bean的生存周期<br>
+3、使用（A,B,C）组合索引作为组合索引，（C）能生效吗，怎样的查询能生效。<br>
+4、Java内存分配策略<br>
+5、比较栈和队列<br>
+6、hashmap的原理<br>
+算法题4道：<br>
+1）找出两个链表共同的元素头，有则返回当前节点值，没有返回null，比如1-2-3 ； 2-7；那么即为2。<br>
+2）给定数组int[],求出其中的最大值。<br>
+3）求出1-n中的质数<br>
+4）输入一串字符串例如abc，输出其中字符可能的字符串，例如abc、acb、bac、bca、cab、cba。</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
@@ -176,9 +253,11 @@ window.onload=getCSS();
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/guan-yu-java-zhong-de-ji-he/" rel="prev"> 关于Java中的集合</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/java-zhong-de-shi-wu-ji-shi-yong/" rel="prev"> Java中的事务及使用</a></div>
 		 
 		 
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/java-lian-xi-ti/" rel="next"> Java练习题</a></div>
+		
 		</div>
 	</nav>
 	<div class="wow rollIn author-info" style="visibility: visible; animation-name: rollIn;">

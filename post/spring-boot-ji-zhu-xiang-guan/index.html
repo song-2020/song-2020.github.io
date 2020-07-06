@@ -151,7 +151,7 @@ window.onload=getCSS();
 			<h1 class="wow swing entry-title">Spring boot技术相关</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-04-02 14:39:07" itemprop="datePublished" pubdate="">2020-04-02</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-06-21 14:39:07" itemprop="datePublished" pubdate="">2020-06-21</time></i>
 	          </div>
 			
 </span>
@@ -163,7 +163,8 @@ window.onload=getCSS();
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
 务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
-框架的另一种表现形式。</p>
+框架的另一种表现形式。<br>
+Spring的三大核心IOC(控制反转)和DI(依赖注入)和AOP（面向切面编程），控制反转是将原先在代码中创建对象的工作交由spring容器管理。依赖注入采用动态代理的方式进行注入，注入方式可以通过构造函数、set方法、@Autowired注解注入。Spring的IOC和DI都是为了解除代码之间的耦合度，便于日后的项目扩展。举个栗子：在未使用spring之前，创建对象是通过在代码中通过new进行实例化的，假设我这里有一个Demo类，Demo类中有一个方法叫做getInfo() ,A、B、C、D类都有调用Demo类中的getInfo()，有一天公司小王不小心把Demo类中的getInfo()方法改动了，结果导致所有调用Demo类的getInfo()的类都报错了，直接项目项目跑不起来,通过上面可想而知为什么我们需要解除程序耦合，而spring的Spring IOC和DI就是为了解决这个问题的。另外就是对象生命周期的问题，以往大量创建的实例对象是在代码进行，如果对象资源不及时释放销毁很容易出现内存溢出异常。</p>
 <p>#二、 Spring Boot 特征<br>
 1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
 2、在Spring Boot中直接嵌入了Tomcat、<br>
@@ -240,9 +241,11 @@ spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core c
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/java-chang-yong-ji-chu-zhi-shi/" rel="prev"> Java常用基础知识</a></div>
+		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/object-lei-zhong-fang-fa-ji-shuo-ming/" rel="prev"> Object 类中方法及说明</a></div>
 		 
 		 
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/sleepwaityieldjoin/" rel="next"> sleep、wait、yield、join</a></div>
+		
 		</div>
 	</nav>
 	<div class="wow rollIn author-info" style="visibility: visible; animation-name: rollIn;">
