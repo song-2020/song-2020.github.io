@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>脚踏实地，仰望星空</title>
-    <updated>2020-07-06T01:53:51.676Z</updated>
+    <updated>2020-07-06T08:35:53.425Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,43 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
+    <entry>
+        <title type="html"><![CDATA[VUE]]></title>
+        <id>https://song-2020.Github.io/post/vue/</id>
+        <link href="https://song-2020.Github.io/post/vue/">
+        </link>
+        <updated>2020-07-06T07:50:13.000Z</updated>
+        <content type="html"><![CDATA[<p>#为什么要用vue?<br>
+传统的网页形式是浏览器脚本语言js连接了各种各样的Html，css，但缺乏正规的组织形式，比如在页面元素非常多，结构很庞大的网页中，数据和视图如果全部混杂在一起，像传统开发一样全部混合在HTML中，那么要对它们进行处理会十分的费劲，并且如果其中有几个结构之间存在藕断丝连的关系，那么会导致代码上出现更大的问题，比如juqery中使用的<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&#039;#̲xxx&#039;).parent().…'>(&#039;#xxx&#039;).parent().parent().parent()
+一开始很好查找，但当页面结构发生变化，也就是说DOM的关联与嵌套层次要发生改变，那么之前的代码可能就会变成这样了：
+</span>('#xxx').parent().parent().parent().parent().parent()<br>
+这样产品迭代后，对dom节点的查找操作等行为会有很大的性能损耗。</p>
+<p>#vue是一款友好的、多用途的且高性能的js框架，它可以帮你创建可维护性和可测试性更强的代码库。官网对vue的优点描述是这样的：易用、灵活、高效</p>
+<p>1.易用：<br>
+学习曲线平缓，api简洁，容易上手。学习过程较react来说比较容易，不那么痛苦</p>
+<p>2.灵活：<br>
+如果你已经有一个现成的服务端框架，你可以将vue作为其中的一部分嵌入，带来更加丰富的交互系统 ，或者你希望将更多业务逻辑放到前端来实现，那么vue的核心库及其生态系统也可以满足你的各式需求，vue允许你将网页分割成可复用的组件，每个组件都可以包含自身的html,css,js文件，以用来渲染网页中相应的地方。</p>
+<p>3.高效：<br>
+虚拟dom： 其数据全部在内存中，只有js引擎参与其中<br>
+而真实dom会有浏览器渲染层在其中</p>
+<p>4.社区和第三方组件库丰富</p>
+<p>#vue是什么？<br>
+<a href="https://blog.csdn.net/weixin_38318244/article/details/85037067?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159399795519725222462702%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159399795519725222462702&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v4-4-85037067.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=vue">https://blog.csdn.net/weixin_38318244/article/details/85037067?ops_request_misc=%7B%22request%5Fid%22%3A%22159399795519725222462702%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;request_id=159399795519725222462702&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v4-4-85037067.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=vue</a><br>
+<a href="https://blog.csdn.net/lishanleilixin/article/details/79360244?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase">https://blog.csdn.net/lishanleilixin/article/details/79360244?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase</a><br>
+##1.Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。<br>
+这里渐进式框架也就是上边vue特点中的灵活一项，使用vue，你可以在原有大系统的上面，把一两个组件改用它实现，当jQuery用；也可以整个用它全家桶开发，当Angular用；</p>
+<p>比如说刚开始用数据绑定做一个表单，后来控制整个页面的dom，再后来用router控制路由做单页应用，组件配合，vuex与数据配合等等，使用vue，你可以在原有大系统的上面，把一两个组件改用它实现，当jQuery用；也可以整个用它全家桶开发，当Angular用。</p>
+<p>##2.Vue 只关注视图层， 采用自底向上增量开发的设计。<br>
+视图层：<br>
+那么HTML中的DOM其实就是视图，一个网页就是通过DOM的组合与嵌套，形成了最基本的视图结构，再通过CSS的修饰，在基本的视图结构上“化妆”让他们看起来更加美观。最后涉及到交互部分，就需要用到JavaScript来接受用户的交互请求，并且通过事件机制来响应用户的交互操作，并且在事件的处理函数中进行各种数据的修改，比如说修改某个DOM中的innerHTML或者innerText部分。</p>
+<p>我们把HTML中的DOM就可以与其他的部分独立开来划分出一个层次，这个层次就叫做视图层。</p>
+<p>MVVM是Model-View-ViewModel 的缩写，由 Model,View,ViewModel 三部分构成，Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。它是一种基于前端开发的架构模式，其核心是提供对View 和 ViewModel 的双向数据绑定，这使得ViewModel 的状态改变可以自动传递给 View，即所谓的数据双向绑定。</p>
+<p>##3.Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>
+响应的数据绑定：<br>
+就是vue.js会自动响应数据的变化情况，并且根据用户在代码中预先写好的绑定关系，对所有绑定在一起的数据和视图内容都进行修改。而这种绑定关系，在图上是以input 标签的v-model属性来声明的，因此你在别的地方可能也会看到有人粗略的称vue.js为声明式渲染的模版引擎。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Java中的事务及使用]]></title>
         <id>https://song-2020.Github.io/post/java-zhong-de-shi-wu-ji-shi-yong/</id>
@@ -75,7 +112,7 @@ JDBC事务、JTA（Java Transaction API java事务接口）事务、容器事务
 不可重复读和脏读的区别是，脏读是读取前一事务未提交的脏数据，不可重复读是重新读取了前一事务已提交的数据。<br>
 虚读(幻读)是指在一个事务内读取到了别的事务插入的数据，导致前后读取不一致。<br>
 12、平常在项目中事务怎么处理的，我们这边数据库操作比较多。<br>
-spring boot AOP<br>
+spring boot   AOP<br>
 好的，今天面试到此结束，待会叫HR将反馈信息告知你。</p>
 <p>老说我的面经简单，来一个正常的了！！！！<br>
 --------------背景--------------<br>
@@ -908,8 +945,7 @@ finalize()    //当垃圾回收器确定不存在对该对象的更多引用时�
 Spring Boot 是一个框架，一种全新的编程规范，他的产生简化了框架的使用，所谓简<br>
 化是指简化了 Spring 众多框架中所需的大量且繁琐的配置文件，所以 Spring Boot 是一个服<br>
 务于框架的框架，服务范围是简化配置文件。所以从本质上来说，Spring Boot 其实就是 Spring<br>
-框架的另一种表现形式。<br>
-Spring的三大核心IOC(控制反转)和DI(依赖注入)和AOP（面向切面编程），控制反转是将原先在代码中创建对象的工作交由spring容器管理。依赖注入采用动态代理的方式进行注入，注入方式可以通过构造函数、set方法、@Autowired注解注入。Spring的IOC和DI都是为了解除代码之间的耦合度，便于日后的项目扩展。举个栗子：在未使用spring之前，创建对象是通过在代码中通过new进行实例化的，假设我这里有一个Demo类，Demo类中有一个方法叫做getInfo() ,A、B、C、D类都有调用Demo类中的getInfo()，有一天公司小王不小心把Demo类中的getInfo()方法改动了，结果导致所有调用Demo类的getInfo()的类都报错了，直接项目项目跑不起来,通过上面可想而知为什么我们需要解除程序耦合，而spring的Spring IOC和DI就是为了解决这个问题的。另外就是对象生命周期的问题，以往大量创建的实例对象是在代码进行，如果对象资源不及时释放销毁很容易出现内存溢出异常。</p>
+框架的另一种表现形式。</p>
 <p>#二、 Spring Boot 特征<br>
 1、使用 Spring Boot 可以创建独立的 Spring 应用程序<br>
 2、在Spring Boot中直接嵌入了Tomcat、<br>
@@ -966,6 +1002,7 @@ MyBatis 是一款优秀的持久层框架，它支持定制化 SQL、存储过�
 Spring是一系列轻量级Java EE框架的集合<br>
 Spring中包含一个“依赖注入”模式的实现<br>
 使用Spring可以实现声明式事务</p>
+<p>Spring的三大核心IOC(控制反转)和DI(依赖注入)和AOP（面向切面编程），控制反转是将原先在代码中创建对象的工作交由spring容器管理。依赖注入采用动态代理的方式进行注入，注入方式可以通过构造函数、set方法、@Autowired注解注入。Spring的IOC和DI都是为了解除代码之间的耦合度，便于日后的项目扩展。举个栗子：在未使用spring之前，创建对象是通过在代码中通过new进行实例化的，假设我这里有一个Demo类，Demo类中有一个方法叫做getInfo() ,A、B、C、D类都有调用Demo类中的getInfo()，有一天公司小王不小心把Demo类中的getInfo()方法改动了，结果导致所有调用Demo类的getInfo()的类都报错了，直接项目项目跑不起来,通过上面可想而知为什么我们需要解除程序耦合，而spring的Spring IOC和DI就是为了解决这个问题的。另外就是对象生命周期的问题，以往大量创建的实例对象是在代码进行，如果对象资源不及时释放销毁很容易出现内存溢出异常。</p>
 <p>Spring是一个轻量级的控制反转(IoC)和面向切面(AOP)的容器框架。<br>
 轻量——从大小与开销两方面而言Spring都是轻量的。完整的Spring框架可以在一个大小只有1MB多的JAR文件里发布。并且Spring所需的处理开销也是微不足道的。此外，Spring是非侵入式的：典型地，Spring应用中的对象不依赖于Spring的特定类。<br>
 控制反转——Spring通过一种称作控制反转（IoC）的技术促进了松耦合。当应用了IoC，一个对象依赖的其它对象会通过被动的方式传递进来，而不是这个对象自己创建或者查找依赖对象。你可以认为IoC与JNDI相反——不是对象从容器中查找依赖，而是容器在对象初始化时不等对象请求就主动将依赖传递给它。<br>
@@ -1063,43 +1100,6 @@ return lazyman;<br>
         </link>
         <updated>2020-06-01T15:39:33.000Z</updated>
         <content type="html"><![CDATA[<p>#死代码删除，代码外提，强度削弱，删除归纳变量，复写传播</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[String, StringBuffer,StringBuilder的区别]]></title>
-        <id>https://song-2020.Github.io/post/string-stringbufferstringbuilder-de-qu-bie/</id>
-        <link href="https://song-2020.Github.io/post/string-stringbufferstringbuilder-de-qu-bie/">
-        </link>
-        <updated>2020-05-28T15:37:39.000Z</updated>
-        <content type="html"><![CDATA[<p>java中String、StringBuffer、StringBuilder是编程中经常使用的字符串类，他们之间的区别也是经常在面试中会问到的问题。现在总结一下，看看他们的不同与相同。<br>
-#1.可变与不可变<br>
-String类中使用字符数组保存字符串，如下就是，因为有“final”修饰符，所以可以知道string对象是不可变的。<br>
-private final char value[];<br>
-String 为不可变对象,一旦被创建,就不能修改它的值. . 对于已经存在的String对象的修改都是重新创建一个新的对象,然后把新的值保存进去.<br>
-StringBuilder与StringBuffer都继承自AbstractStringBuilder类，在AbstractStringBuilder中也是使用字符数组保存字符串，如下就是，可知这两种对象都是可变的。<br>
-char[] value;<br>
-StringBuffer:是一个可变对象,当对他进行修改的时候不会像String那样重新建立对象 , 它只能通过构造函数来建立,  如： StringBuffer sb = new StringBuffer();<br>
-不能通过赋值符号对他进行付值. ， 如 sb = &quot;welcome to here!&quot;;//error<br>
-对象被建立以后,在内存中就会分配内存空间,并初始保存一个null.向StringBuffer中赋值的时候可以通过它的append方法.      sb.append(&quot;hello&quot;);<br>
-#2.是否多线程安全<br>
-String中的对象是不可变的，也就可以理解为常量， 显然线程安全 。<br>
-AbstractStringBuilder是StringBuilder与StringBuffer的公共父类，定义了一些字符串的基本操作，如expandCapacity、append、insert、indexOf等公共方法。<br>
-StringBuffer对方法加了同步锁或者对调用的方法加了同步锁，所以是 线程安全的 。看如下源码：</p>
-<p>1   public   synchronized  StringBuffer reverse() {<br>
-2       super .reverse();<br>
-3       return   this ;<br>
-4  }<br>
-5<br>
-6   public   int  indexOf(String str) {<br>
-7       return  indexOf(str, 0);         //存在 public synchronized int                 indexOf(String str, int fromIndex) 方法<br>
-8  }</p>
-<p>StringBuilder并没有对方法进行加同步锁，所以是 非线程安全的 。<br>
-#3.StringBuilder与StringBuffer共同点<br>
-StringBuilder与StringBuffer有公共父类AbstractStringBuilder( 抽象类 )。<br>
-抽象类与接口的其中一个区别是：抽象类中可以定义一些子类的公共方法，子类只需要增加新的功能，不需要重复写已经存在的方法；而接口中只是对方法的申明和常量的定义。<br>
-StringBuilder、StringBuffer的方法都会调用AbstractStringBuilder中的公共方法，如super.append(...)。只是StringBuffer会在方法上加synchronized关键字，进行同步。<br>
-最后，如果程序不是多线程的，那么使用StringBuilder效率高于StringBuffer。</p>
-<p>效率比较String &lt; StringBuffer &lt; StringBuilder，但是在String S1 =“This is only a”+“simple”+“test”时，String效率最高。</p>
 ]]></content>
     </entry>
 </feed>

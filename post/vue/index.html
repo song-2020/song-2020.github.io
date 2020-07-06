@@ -6,7 +6,7 @@
 <meta HTTP-EQUIV="pragma" CONTENT="no-cache"> 
 <meta HTTP-EQUIV="Cache-Control" CONTENT="no-cache, must-revalidate"> 
 <meta HTTP-EQUIV="expires" CONTENT="0"> 
-<title>Java中的事务及使用 | 脚踏实地，仰望星空</title>	
+<title>VUE | 脚踏实地，仰望星空</title>	
 
 <link rel="stylesheet" href="https://song-2020.Github.io/styles/main.css">
 <script type="text/javascript">
@@ -148,10 +148,10 @@ window.onload=getCSS();
 	
 	                      
 		<div class="entry-content">
-			<h1 class="wow swing entry-title">Java中的事务及使用</h1>
+			<h1 class="wow swing entry-title">VUE</h1>
 <div class="entry-meta">
 <div class="wow bounce">
-	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-07-06 09:39:37" itemprop="datePublished" pubdate="">2020-07-06</time></i>
+	<i class="iconfont icon-rili"> <time class="lately-a" datetime="2020-07-06 15:50:13" itemprop="datePublished" pubdate="">2020-07-06</time></i>
 	          </div>
 			
 </span>
@@ -159,33 +159,35 @@ window.onload=getCSS();
 		</div>
                   
 			<div class="wow slideInLeft entry-summary song">
-				<p>https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
-<!-- more -->
-<p>什么是事务？</p>
-<p>事务（Transaction），一般是指要做的或所做的事情。在计算机术语中是指访问并可能更新数据库中各种数据项的一个程序执行单元(unit)。事务通常由高级数据库操纵语言或编程语言（如SQL，C++或Java）书写的用户程序的执行所引起，并用形如begin transaction和end transaction语句（或函数调用）来界定。事务由事务开始(begin transaction)和事务结束(end transaction)之间执行的全体操作组成。</p>
-<p>为什么要事务？</p>
-<p>事务是为解决数据安全操作提出的，事务控制实际上就是控制数据的安全访问。</p>
-<p>用一个简单例子说明：银行转帐业务，账户A要将自己账户上的1000元转到B账户下面，A账户余额首先要减去1000元，然后B账户要增加1000元。假如在中间网络出现了问题，A账户减去1000元已经结束，B因为网络中断而操作失败，那么整个业务失败，必须做出控制，要求A账户转帐业务撤销。这才能保证业务的正确性，完成这个操走就需要事务，将A账户资金减少和B账户资金增加放到同一个事务里，要么全部执行成功，要么全部撤销，这样就保证了数据的安全性。</p>
-<p>事务的4个特性（ACID）：</p>
-<ol>
-<li>
-<p>原子性（atomicity）：事务是数据库的逻辑工作单位，而且是必须是原子工作单位，对于其数据修改，要么全部执行，要么全部不执行。</p>
-</li>
-<li>
-<p>一致性（consistency）：事务在完成时，必须是所有的数据都保持一致状态。在相关数据库中，所有规则都必须应用于事务的修改，以保持所有数据的完整性。（实例：转账，两个账户余额相加，值不变。）</p>
-</li>
-<li>
-<p>隔离性（isolation）：一个事务的执行不能被其他事务所影响。</p>
-</li>
-<li>
-<p>持久性（durability）：一个事务一旦提交，事物的操作便永久性的保存在DB中。即便是在数据库系统遇到故障的情况下也不会丢失提交事务的操作。</p>
-</li>
-</ol>
-<p>Java有几种类型的事务？</p>
-<p>Java事务的类型有三种：JDBC事务、JTA（Java Transaction API）事务、容器事务。<br>
-————————————————<br>
-版权声明：本文为CSDN博主「share_happy_life」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>
-原文链接：https://blog.csdn.net/weixin_37934748/article/details/82774230</p>
+				<p>#为什么要用vue?<br>
+传统的网页形式是浏览器脚本语言js连接了各种各样的Html，css，但缺乏正规的组织形式，比如在页面元素非常多，结构很庞大的网页中，数据和视图如果全部混杂在一起，像传统开发一样全部混合在HTML中，那么要对它们进行处理会十分的费劲，并且如果其中有几个结构之间存在藕断丝连的关系，那么会导致代码上出现更大的问题，比如juqery中使用的<br>
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&#039;#̲xxx&#039;).parent().…'>(&#039;#xxx&#039;).parent().parent().parent()
+一开始很好查找，但当页面结构发生变化，也就是说DOM的关联与嵌套层次要发生改变，那么之前的代码可能就会变成这样了：
+</span>('#xxx').parent().parent().parent().parent().parent()<br>
+这样产品迭代后，对dom节点的查找操作等行为会有很大的性能损耗。</p>
+<p>#vue是一款友好的、多用途的且高性能的js框架，它可以帮你创建可维护性和可测试性更强的代码库。官网对vue的优点描述是这样的：易用、灵活、高效</p>
+<p>1.易用：<br>
+学习曲线平缓，api简洁，容易上手。学习过程较react来说比较容易，不那么痛苦</p>
+<p>2.灵活：<br>
+如果你已经有一个现成的服务端框架，你可以将vue作为其中的一部分嵌入，带来更加丰富的交互系统 ，或者你希望将更多业务逻辑放到前端来实现，那么vue的核心库及其生态系统也可以满足你的各式需求，vue允许你将网页分割成可复用的组件，每个组件都可以包含自身的html,css,js文件，以用来渲染网页中相应的地方。</p>
+<p>3.高效：<br>
+虚拟dom： 其数据全部在内存中，只有js引擎参与其中<br>
+而真实dom会有浏览器渲染层在其中</p>
+<p>4.社区和第三方组件库丰富</p>
+<p>#vue是什么？<br>
+<a href="https://blog.csdn.net/weixin_38318244/article/details/85037067?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159399795519725222462702%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159399795519725222462702&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v4-4-85037067.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=vue">https://blog.csdn.net/weixin_38318244/article/details/85037067?ops_request_misc=%7B%22request%5Fid%22%3A%22159399795519725222462702%22%2C%22scm%22%3A%2220140713.130102334..%22%7D&amp;request_id=159399795519725222462702&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v3~pc_rank_v4-4-85037067.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=vue</a><br>
+<a href="https://blog.csdn.net/lishanleilixin/article/details/79360244?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase">https://blog.csdn.net/lishanleilixin/article/details/79360244?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase&amp;depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.nonecase</a><br>
+##1.Vue.js（读音 /vjuː/, 类似于 view） 是一套构建用户界面的渐进式框架。<br>
+这里渐进式框架也就是上边vue特点中的灵活一项，使用vue，你可以在原有大系统的上面，把一两个组件改用它实现，当jQuery用；也可以整个用它全家桶开发，当Angular用；</p>
+<p>比如说刚开始用数据绑定做一个表单，后来控制整个页面的dom，再后来用router控制路由做单页应用，组件配合，vuex与数据配合等等，使用vue，你可以在原有大系统的上面，把一两个组件改用它实现，当jQuery用；也可以整个用它全家桶开发，当Angular用。</p>
+<p>##2.Vue 只关注视图层， 采用自底向上增量开发的设计。<br>
+视图层：<br>
+那么HTML中的DOM其实就是视图，一个网页就是通过DOM的组合与嵌套，形成了最基本的视图结构，再通过CSS的修饰，在基本的视图结构上“化妆”让他们看起来更加美观。最后涉及到交互部分，就需要用到JavaScript来接受用户的交互请求，并且通过事件机制来响应用户的交互操作，并且在事件的处理函数中进行各种数据的修改，比如说修改某个DOM中的innerHTML或者innerText部分。</p>
+<p>我们把HTML中的DOM就可以与其他的部分独立开来划分出一个层次，这个层次就叫做视图层。</p>
+<p>MVVM是Model-View-ViewModel 的缩写，由 Model,View,ViewModel 三部分构成，Model 层代表数据模型，也可以在Model中定义数据修改和操作的业务逻辑；View 代表UI 组件，它负责将数据模型转化成UI 展现出来，ViewModel 是一个同步View 和 Model的对象。它是一种基于前端开发的架构模式，其核心是提供对View 和 ViewModel 的双向数据绑定，这使得ViewModel 的状态改变可以自动传递给 View，即所谓的数据双向绑定。</p>
+<p>##3.Vue 的目标是通过尽可能简单的 API 实现响应的数据绑定和组合的视图组件。<br>
+响应的数据绑定：<br>
+就是vue.js会自动响应数据的变化情况，并且根据用户在代码中预先写好的绑定关系，对所有绑定在一起的数据和视图内容都进行修改。而这种绑定关系，在图上是以input 标签的v-model属性来声明的，因此你在别的地方可能也会看到有人粗略的称vue.js为声明式渲染的模版引擎。</p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
@@ -195,10 +197,8 @@ window.onload=getCSS();
 		
 		<div class="nav-links3">
       
-		<div class="wow bounceInLeft nav-previous3"><a href="https://song-2020.Github.io/post/vue/" rel="prev"> VUE</a></div>
 		 
-		 
-		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/java-mian-shi-ti-xiang-guan/" rel="next"> Java面试题相关</a></div>
+		<div class="wow bounceInRight nav-next3"><a href="https://song-2020.Github.io/post/java-zhong-de-shi-wu-ji-shi-yong/" rel="next"> Java中的事务及使用</a></div>
 		
 		</div>
 	</nav>
