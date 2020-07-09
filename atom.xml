@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>脚踏实地，仰望星空</title>
-    <updated>2020-07-09T08:46:45.804Z</updated>
+    <updated>2020-07-09T09:07:42.198Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
+    <entry>
+        <title type="html"><![CDATA[Mybatis通用Mapper（tk.mybatis）]]></title>
+        <id>https://song-2020.Github.io/post/mybatis-tong-yong-mappertkmybatis/</id>
+        <link href="https://song-2020.Github.io/post/mybatis-tong-yong-mappertkmybatis/">
+        </link>
+        <updated>2020-07-09T08:54:07.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-前言">一、前言</h1>
+<pre><code>使用Mybatis的开发者，大多数都会遇到一个问题，就是要写大量的SQL在xml文件中，除了特殊的业务逻辑SQL之外，还有大量结构类似的增删改查SQL。而且，当数据库表结构改动时，对应的所有SQL以及实体类都需要更改。这工作量和效率的影响或许就是区别增删改查程序员和真正程序员的屏障。这时，通用Mapper便应运而生……
+</code></pre>
+<h1 id="二-什么是通用mapper">二、什么是通用Mapper</h1>
+<pre><code>通用Mapper就是为了解决单表增删改查，基于Mybatis的插件。开发人员不需要编写SQL，不需要在DAO中增加方法，只要写好实体类，就能支持相应的增删改查方法。
+</code></pre>
+<p><a href="http://www.manongjc.com/article/62767.html">相关操作</a></p>
+<h1 id="总结">总结</h1>
+<pre><code>通用Mapper的原理是通过反射获取实体类的信息，构造出相应的SQL，因此我们只需要维护好实体类即可，对于应付复杂多变的需求提供了很大的便利。上文叙述的只是通用Mapper的简单用法，在实际项目中，还是要根据业务，在通用Mapper的基础上封装出粒度更大、更通用、更好用的方法。</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[MariaDB]]></title>
         <id>https://song-2020.Github.io/post/mariadb/</id>
@@ -1079,46 +1096,5 @@ wait会释放锁，sleep不会释放锁<br>
 wait（无超时设置的版本）会持续阻塞，必须等待唤醒，而sleep必然有超时，所以一定会自己醒来<br>
 wait 实例方法（Object），在对象上调用，表示在其上等待；sleep静态方法，当前线程</p>
 <!-- more -->]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[常用的三种设计模式：Singleton、Template、Strategy模式]]></title>
-        <id>https://song-2020.Github.io/post/chang-yong-de-san-chong-she-ji-mo-shi-singletontemplatestrategy-mo-shi/</id>
-        <link href="https://song-2020.Github.io/post/chang-yong-de-san-chong-she-ji-mo-shi-singletontemplatestrategy-mo-shi/">
-        </link>
-        <updated>2020-06-15T15:30:13.000Z</updated>
-        <content type="html"><![CDATA[<h1 id="一-singleton单例模式">一、Singleton单例模式</h1>
-<p>单例指的只能存在唯一的一个实例对象(单例)<br>
-单例模式的设计思路：先阻止类可以类外部通过new的方式(构造函数)创建实例，并在类的内部创建一个获得该类实例的静态方法，用来创建该类实例（不存在实例时）或者返回实例（存在实例时）从而实现单一实例的控制。<br>
-Singleton模式首先先对其构造方法的权限声明为private，阻止类外部通过构造方法创建实例，并采用static来共享对象实例，再提供get方法来获取唯一实例。但是要特别注意的是，在懒汉式例程中get方法内部采用了synchronized锁声明（只允许一个线程进入）。<br>
-如果没有声明的情况下，如下：</p>
-<p>public static LazyMan getlazyman()<br>
-{<br>
-if(lazyman== null)<br>
-{ lazyman = new LazyMan(); }<br>
-return lazyman;<br>
-}</p>
-<pre><code>在多线程下单例模式 使用是非常危险的（不安全的），有可能出现这种情况，唯一实例并未创建时，多个线程都调用类内部创建类的方法，而且都运行到if(lazyman == null)内部而且在运行lazyman = newLazyMan();之前的地方，这就非常尴尬了，这个时候lazyman=null，if里的条件语句是true，所以可以进入到if内部，也就多个线程都通过了我们原本为了限制实例数量的判断语句，而且下一步都是lazyman= new LazyMan();，这样在堆中就存在多个LazyMan实例了，这就和我们预期遐想的不同了。
-</code></pre>
-<p>Java中四种线程安全的单例模式实现方式：<br>
-第一种：饿汉模式（线程安全）<br>
-第二种：懒汉模式 （如果方法没有synchronized，则线程不安全）<br>
-第三种：懒汉模式改良版（线程安全，使用了double-check，即check-加锁-check，目的是为了减少同步的开销）<br>
-第四种：利用私有的内部工厂类（线程安全，内部类也可以换成内部接口，不过工厂类变量的作用于要改为public了。）</p>
-<h1 id="二-template模式模板模式">二、Template模式（模板模式）</h1>
-<pre><code>    模板模式，顾名思义，设定了模板，并让接下来代码实现都按照一个模板进行，说到模板，很容易就联想到了抽象类和接口的运用，定义了方法名，没有方法体，然后让子类去实现、继承、扩展他们的方法，那么，抽象类和接口的方法不妨就充当了“模板”的作用，也就是骨架，这就是模板模式。
-    在模板模式中，可分为抽象模板(AbstractTemplate)和具体模板(Concrete Template)
-    抽象模板也就是骨架，定义一个或多个操作(方法)，以便被子类实现。
-    具体模板指的就是对抽象模板的实现，也可以说就是子类。在
-    抽象模板中的基础方法又可以分为：抽象方法(AbstractMethod)、具体方法(Concrete Method)、钩子方法(Hook Method)
-    抽象方法对应抽象类中的抽象方法，具体方法对应抽象类中具体方法，钩子方法对应抽象类（接口）中的空方法。
-    例程：//定义了一个抽象类，名字为SteamRice（煮饭、蒸饭），方法分别为PutRice(下米)、WashRice(洗米)、CookRice(煮米)
-</code></pre>
-<p>//这个类说明了煮饭的基本过程，是煮饭的骨架，什么饭都是这个步骤。<br>
-//而它的子类就对其进行了不同的实现，但是骨架还是不变的。</p>
-<h1 id="三-strategy策略模式">三、Strategy策略模式</h1>
-<pre><code>    在模板设计模式中，我们是通过抽象类（或者实现接口）制作模板，通过继承抽象类（或者实现接口）来实现模板，是一种重心放在子类上的逻辑。而策略模式其逻辑是反过来的，是一种重心放在父类上的逻辑，主要是通过父类对象对子类改写的方法进行调用。    
-    在策略模式中，可以通过策略(Strategy)一词来理解这个模式的逻辑，在逻辑上将策略的作用（目的）和策略的具体实施计划分开，父类被称为抽象策略(Strategy)，也就是相当策略的作用（目的），只提供一个骨架，而其子类被称为具体策略(ConcreteStrategy)，也就是相当策略的具体实施计划，每个子类都是一个计划。当然，既然是策略，那么就有策略的使用者，这个使用者在策略模式中称为Context（上下文、环境），正如上面所说的，在Context中创建一个Strategy的对象引用去调用ConcreteStrategy的具体实现。    
-    所以，策略模式是相当于对一系列解决方案（或算法等）包装到一系列的策略类里面去，然后通过父类对象去访问具体实现策略的子类，而提供多种解决方案，因为这些方案都是解决相同的问题，所以这些方案都可以互换，都不会影响使用方案的客户端。</code></pre>
-]]></content>
     </entry>
 </feed>
