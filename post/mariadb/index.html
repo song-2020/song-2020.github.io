@@ -166,18 +166,25 @@ window.onload=getCSS();
                   
 			<div class="wow slideInLeft entry-summary song">
 				<h1 id="简介">简介</h1>
-<p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB（英语：XtraDB）来代替MySQL的InnoDB。</p>
+<pre><code>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB（英语：XtraDB）来代替MySQL的InnoDB。
+</code></pre>
 <h1 id="mariadb与mysql">MariaDB与Mysql</h1>
-<p>MariaDB虽然被视为MySQL数据库的替代品，但它在扩展功能、存储引擎以及一些新的功能改进方面都强过MySQL。而且从MySQL迁移到MariaDB也是非常简单的：<br>
-1、数据和表定义文件（.frm）是二进制兼容的<br>
-2、所有客户端API、协议和结构都是完全一致的<br>
-3、所有文件名、二进制、路径、端口等都是一致的<br>
-4、所有的MySQL连接器，比如PHP、Perl、Python、Java、.NET、MyODBC、Ruby以及MySQL C connector等在MariaDB中都保持不变<br>
-5、mysql-client包在MariaDB服务器中也能够正常运行<br>
-6、共享的客户端库与MySQL也是二进制兼容的<br>
-也就是说，在大多数情况下，你完全可以卸载MySQL然后安装MariaDB，然后就可以像之前一样正常的运行。</p>
-<p>操作：<br>
-https://blog.csdn.net/weixin_42006882/article/details/104830294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159428341619195265931480%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159428341619195265931480&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<sub>all</sub>sobaiduend~default-9-104830294.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=mariadb</p>
+<pre><code>MariaDB虽然被视为MySQL数据库的替代品，但它在扩展功能、存储引擎以及一些新的功能改进方面都强过MySQL。而且从MySQL迁移到MariaDB也是非常简单的：
+1、数据和表定义文件（.frm）是二进制兼容的
+2、所有客户端API、协议和结构都是完全一致的
+3、所有文件名、二进制、路径、端口等都是一致的
+4、所有的MySQL连接器，比如PHP、Perl、Python、Java、.NET、MyODBC、Ruby以及MySQL C connector等在MariaDB中都保持不变
+5、mysql-client包在MariaDB服务器中也能够正常运行
+6、共享的客户端库与MySQL也是二进制兼容的
+也就是说，在大多数情况下，你完全可以卸载MySQL然后安装MariaDB，然后就可以像之前一样正常的运行。
+</code></pre>
+<h1 id="关于xtradb">关于XtraDB</h1>
+<pre><code>XtraDB是由Percona开发的一款MySQL数据库的高性能存储引擎，其目的是用来代替InnoDB存储引擎，可用于需要更高性能的环境。XtraDB可以看作是InnoDB存储引擎的增强版本，它在InnoDB上进行了大量的修改和patched，它完全兼容InnoDB，且提供了很多InnoDB不具备的有用的功能。
+例如：在多核CPU上面的性能和伸缩性要更好；对于内存的分配和使用也要更好；也解除了InnoDB的很多限制；提供了比InnoDB更多的配置和性能监控参数。
+对于高负载的MySQL应用来说，如果不需要MySQL官方技术支持的话，完全可以使用XtraDB来代替InnoDB存储引擎。此外，Percona还提供了打了补丁的MySQL版本，这些补丁对MySQL很多方面进行了改进，性能提高，增加更多监控参数等等。据说JavaEye的数据库就是使用了Percona的版本。
+</code></pre>
+<h1 id="操作">操作：</h1>
+<p><a href="https://blog.csdn.net/weixin_42006882/article/details/104830294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159428341619195265931480%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159428341619195265931480&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2~all~sobaiduend~default-9-104830294.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=mariadb">关于MariaDB的一些操作</a></p>
 
 							</div>
 	<div class="wow bounceInDown vt-post-tags">
