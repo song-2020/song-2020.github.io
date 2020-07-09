@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>脚踏实地，仰望星空</title>
-    <updated>2020-07-06T15:14:20.337Z</updated>
+    <updated>2020-07-09T08:34:44.108Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,27 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
+    <entry>
+        <title type="html"><![CDATA[MariaDB]]></title>
+        <id>https://song-2020.Github.io/post/mariadb/</id>
+        <link href="https://song-2020.Github.io/post/mariadb/">
+        </link>
+        <updated>2020-07-09T08:21:03.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="简介">简介</h1>
+<p>MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB（英语：XtraDB）来代替MySQL的InnoDB。</p>
+<h1 id="mariadb与mysql">MariaDB与Mysql</h1>
+<p>MariaDB虽然被视为MySQL数据库的替代品，但它在扩展功能、存储引擎以及一些新的功能改进方面都强过MySQL。而且从MySQL迁移到MariaDB也是非常简单的：<br>
+1、数据和表定义文件（.frm）是二进制兼容的<br>
+2、所有客户端API、协议和结构都是完全一致的<br>
+3、所有文件名、二进制、路径、端口等都是一致的<br>
+4、所有的MySQL连接器，比如PHP、Perl、Python、Java、.NET、MyODBC、Ruby以及MySQL C connector等在MariaDB中都保持不变<br>
+5、mysql-client包在MariaDB服务器中也能够正常运行<br>
+6、共享的客户端库与MySQL也是二进制兼容的<br>
+也就是说，在大多数情况下，你完全可以卸载MySQL然后安装MariaDB，然后就可以像之前一样正常的运行。</p>
+<p>操作：<br>
+https://blog.csdn.net/weixin_42006882/article/details/104830294?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159428341619195265931480%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&amp;request_id=159428341619195265931480&amp;biz_id=0&amp;utm_medium=distribute.pc_search_result.none-task-blog-2<sub>all</sub>sobaiduend~default-9-104830294.first_rank_ecpm_v3_pc_rank_v4&amp;utm_term=mariadb</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[VUE]]></title>
         <id>https://song-2020.Github.io/post/vue/</id>
@@ -1091,15 +1112,6 @@ return lazyman;<br>
 <pre><code>    在模板设计模式中，我们是通过抽象类（或者实现接口）制作模板，通过继承抽象类（或者实现接口）来实现模板，是一种重心放在子类上的逻辑。而策略模式其逻辑是反过来的，是一种重心放在父类上的逻辑，主要是通过父类对象对子类改写的方法进行调用。    
     在策略模式中，可以通过策略(Strategy)一词来理解这个模式的逻辑，在逻辑上将策略的作用（目的）和策略的具体实施计划分开，父类被称为抽象策略(Strategy)，也就是相当策略的作用（目的），只提供一个骨架，而其子类被称为具体策略(ConcreteStrategy)，也就是相当策略的具体实施计划，每个子类都是一个计划。当然，既然是策略，那么就有策略的使用者，这个使用者在策略模式中称为Context（上下文、环境），正如上面所说的，在Context中创建一个Strategy的对象引用去调用ConcreteStrategy的具体实现。    
     所以，策略模式是相当于对一系列解决方案（或算法等）包装到一系列的策略类里面去，然后通过父类对象去访问具体实现策略的子类，而提供多种解决方案，因为这些方案都是解决相同的问题，所以这些方案都可以互换，都不会影响使用方案的客户端。</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[针对循环优化进行的方法]]></title>
-        <id>https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/</id>
-        <link href="https://song-2020.Github.io/post/zhen-dui-xun-huan-you-hua-jin-xing-de-fang-fa/">
-        </link>
-        <updated>2020-06-01T15:39:33.000Z</updated>
-        <content type="html"><![CDATA[<p>#死代码删除，代码外提，强度削弱，删除归纳变量，复写传播</p>
 ]]></content>
     </entry>
 </feed>
