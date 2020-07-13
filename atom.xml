@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://song-2020.Github.io</id>
     <title>脚踏实地，仰望星空</title>
-    <updated>2020-07-09T09:08:42.988Z</updated>
+    <updated>2020-07-13T10:06:42.565Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://song-2020.Github.io"/>
     <link rel="self" href="https://song-2020.Github.io/atom.xml"/>
@@ -10,6 +10,38 @@
     <logo>https://song-2020.Github.io/images/avatar.png</logo>
     <icon>https://song-2020.Github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 脚踏实地，仰望星空</rights>
+    <entry>
+        <title type="html"><![CDATA[SqlToJson项目技术栈]]></title>
+        <id>https://song-2020.Github.io/post/sqltojson-xiang-mu-ji-zhu-zhan/</id>
+        <link href="https://song-2020.Github.io/post/sqltojson-xiang-mu-ji-zhu-zhan/">
+        </link>
+        <updated>2020-07-13T09:39:36.000Z</updated>
+        <content type="html"><![CDATA[<p>1、sqlToJson的核心思想:对由 带有信息节点 的树进行左中右顺序的遍历，结果挂在顶级节点上，然后将顶级节点当成一个对象进行存储。</p>
+<p>public void getAll() throws SQLException, IOException {<br>
+GetAllUsers getAllUsers1=new GetAllUsers();<br>
+User[] users=getAllUsers1.getAllUsers();<br>
+//定义第一个节点为起点，该节点的子节点为表中第一个节点的id信息<br>
+TreeNode treeNode=new TreeNode();<br>
+treeNode.setPid(0);<br>
+treeNode.setId(users[1].getUser_id());<br>
+System.out.println(&quot;开始执行&quot;);<br>
+this.setChildList(treeNode.getId(),treeNode);<br>
+String json=  JSON.toJSON(treeNode).toString();<br>
+//创建 ObjectOutputStream 输出流<br>
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(&quot;file.txt&quot;));<br>
+oos.writeObject(json);<br>
+System.out.println(&quot;执行结束&quot;);<br>
+}</p>
+<p>2、对树形数据的存储：将顶级节点当成一个对象转化为JSON对象，然后再转化为字符串</p>
+<p>import com.alibaba.fastjson.JSON;</p>
+<p>String json=  JSON.toJSON(treeNodes).toString();</p>
+<p>3、将对象写入到文件中：利用ObjectOutputStream类</p>
+<p>//创建 ObjectOutputStream 输出流<br>
+ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(&quot;appointIdFile.txt&quot;)));<br>
+oos.writeObject(json);<br>
+System.out.println(&quot;执行结束&quot;);</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Mybatis通用Mapper（tk.mybatis）]]></title>
         <id>https://song-2020.Github.io/post/mybatis-tong-yong-mappertkmybatis/</id>
@@ -1060,41 +1092,5 @@ Spring通过对AOP的支持，借助log4j等Apache开源组件实现了日志系
 <p>spring由哪些框架组成？<br>
 spring context ,spring aop ,springMVC ,spring ORm ,spring web ,spring dao,core context</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sleep、wait、yield、join]]></title>
-        <id>https://song-2020.Github.io/post/sleepwaityieldjoin/</id>
-        <link href="https://song-2020.Github.io/post/sleepwaityieldjoin/">
-        </link>
-        <updated>2020-06-20T15:26:59.000Z</updated>
-        <content type="html"><![CDATA[<p>#1.sleep()方法<br>
-在指定时间内让当前正在执行的线程暂停执行，但不会释放“锁标志”。不推荐使用。<br>
-sleep()使当前线程进入阻塞状态，在指定时间内不会执行。<br>
-#2.wait()方法  会使线程释放锁资源<br>
-在其他线程调用对象的notify或notifyAll方法前，导致当前线程等待。线程会释放掉它所占有的“锁标志”，从而使别的线程有机会抢占该锁。<br>
-当前线程必须拥有当前对象锁。如果当前线程不是此锁的拥有者，会抛出IllegalMonitorStateException异常。<br>
-唤醒当前对象锁的等待线程使用notify或notifyAll方法，也必须拥有相同的对象锁，否则也会抛出IllegalMonitorStateException异常。<br>
-waite()和notify()必须在synchronized函数或synchronized　block中进行调用。如果在non-synchronized函数或non-synchronized　block中进行调用，虽然能编译通过，但在运行时会发生IllegalMonitorStateException的异常。<br>
-#3.yield方法<br>
-暂停当前正在执行的线程对象。<br>
-yield()只是使当前线程重新回到可执行状态，所以执行yield()的线程有可能在进入到可执行状态后马上又被执行。<br>
-yield()只能使同优先级或更高优先级的线程有执行的机会。<br>
-#4.join方法   会使线程释放锁资源<br>
-join()等待该线程终止。<br>
-等待调用join方法的线程结束，再继续执行。如：t.join();//主要用于等待t线程运行结束，若无此句，main则会执行完毕，导致结果不可预测</p>
-<p>#总结<br>
-yield方法：只是简单地对于CPU时间片的“礼让”，除非循环yield，否则一次yield，可能下次该线程仍旧可能会抢占到CPU时间片，可能方法调用和不调用没</p>
-<p>#差别<br>
-sleep是静态方法，针对当前线程，进入休眠状态，两个版本的sleep方法始终有时间参数，所以必然会在指定的时间内苏醒，他也不会释放锁，当然，sleep方法的调用非必须在同步方法（同步代码块）内</p>
-<p>join是实例方法，表示等待谁，是用于线程顺序的调度方法，可以做到一个线程等待另外一个线程，join有三个版本，指定超时时间或者持续等待直到目标线程执行结束，join也无需在同步方法（同步代码块）内</p>
-<p>sleep和join都是可中断方法，被其他线程中断时，都会抛出InterruptedException异常，并且会醒来<br>
-join方法底层依赖wait，我们对比下wait与sleep<br>
-wait和sleep都会使线程进入阻塞状态，都是可中断方法，被中断后都会抛出异常<br>
-wait是Object的方法，sleep是Thread的方法<br>
-wait必须在同步中执行，sleep不需要（join底层依赖wait，但是不需要在同步中，因为join方法就是synchronized的）<br>
-wait会释放锁，sleep不会释放锁<br>
-wait（无超时设置的版本）会持续阻塞，必须等待唤醒，而sleep必然有超时，所以一定会自己醒来<br>
-wait 实例方法（Object），在对象上调用，表示在其上等待；sleep静态方法，当前线程</p>
-<!-- more -->]]></content>
     </entry>
 </feed>
